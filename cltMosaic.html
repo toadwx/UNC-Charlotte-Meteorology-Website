@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<head>
+	<title>Mosaic</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Wx Console">
+    <meta name="author" content="Warren Pettee">
+    <meta http-equiv="refresh" content="240" />
+    <link rel="stylesheet" href="mosaic.css"/>
+    
+    <!-- Clock code -->
+    <script>
+        // -------------------------------- CLOCK
+        function startTime() {
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML = h+":"+m+":"+s+" UTC";
+            var t = setTimeout(function(){startTime()},500);
+        }
+
+        function checkTime(i) {
+            if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+    <script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-54843224-1', 'auto');
+			ga('require', 'displayfeatures');
+			ga('send', 'pageview');
+	</script>
+    
+</head>
+<body onload="startTime()"> <!-- Run time function in head -->
+    	<!-- TOP BANNER -->
+        <span id='txt' style="font-family: 'Arial', Sans-serif; position:fixed;top: 10px;left: 10px;z-index: 1000;color:#ffffff;"> </span>
+        <!--<a href="http://weather.uncc.edu/" style="position:absolute;top: 10px;right: 10px;z-index: 1000;color:#ffffff;">weather.uncc.edu</a> -->
+        <div id="header" style="background:linear-gradient(gray, black);z-index: -1;">
+            <h2 style="font-family: 'Arial', Sans-serif; background:#00703C;position:fixed;left:0;right:0;margin:0 auto;text-align:center;color:#ffffff;">Feed Mosaic Panel</h2>
+            <img id = "school" src="http://weather.uncc.edu/src/LogoIdea.png" style="position:fixed;bottom: 0px;left: 0px;z-index: 1000;" width="7%"/>
+        </div>
+        <div id="txt1">
+        	<!-- I-85 --> 
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085N0049-30_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0049-25_IMG.JPG' width='19%'>
+        	<img src='https://tims.ncdot.gov/TIMS/Cameras/viewimage.ashx?id=US002900000097_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0046-24_IMG.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085N0045-81_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0044-52_IMG.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0043-02_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085N0042-55_IMG.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0042-21_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0041-30_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0040-30_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0039-10_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085s0038-55_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0038-30_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085N0038-35_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0038-05_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0036-95_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085s0036-95_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085n0036-35_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=nc0016s0006-95_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0035-00_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085N0034-50_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0033-10_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0031-90_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0030-60_IMG.JPG' width='19%'>
+        	
+        	<!-- I-77-->
+        	<img src='https://tims.ncdot.gov/TIMS/Cameras/viewimage.ashx?id=0I0077S0030-00_IMG.JPG' width='19%'>
+        	<img src='https://tims.ncdot.gov/TIMS/Cameras/viewimage.ashx?id=0I0077S0028-00_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0022-91_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0022-18_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0021-35_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0021-43_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0020-51_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0019-51_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077n0018-47_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077s0017-45_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0016-14_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077s0015-66_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077s0014-51_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0014-51_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0013-89_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085s0038-55_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0012-87_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0012-70_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0012-87_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077s0012-70_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077n0012-26_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=nc0016n0005-24_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0011-02_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0011-24_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0011-02_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077s0011-24_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0009-44_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0009-86_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0009-25_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0008-91_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0008-16_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077s0007-30_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077s0006-79_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0006-27_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0005-86_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077n0004-87_img.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0003-58_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0002-48_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0002-02_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0001-43_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077N0000-86_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0077S0000-05_IMG.jpg' width='19%'>
+        	
+        	<!-- I485 -->
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0001-30_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485O0002-60_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485O0004-00_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0006-60_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485O0005-70_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0007-70_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485O0009-00_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0011-35_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0011-85_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0012-30_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0013-37_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0013-70_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485O0014-25_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0014-70_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0015-24_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485O0015-54_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0016-63_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0017-14_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485O0017-78_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0018-70_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485O0019-10_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0019-48_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0020-15_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485O0020-55_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485O0021-10_IMG.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085N0047-53_img.JPG' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0085S0048-21_IMG.jpg' width='19%'>
+        	<img src='http://tims.ncdot.gov/tims/cameras/viewimage.ashx?id=0I0485I0033-30_IMG.JPG' width='19%'>
+        	
+        	<!-- USGS -->
+        	<img src='http://maps.co.mecklenburg.nc.us/rest/v1/ws_fins_creekcam.php?camid=1&cachebuster=1455286651642' width='19%'>
+        	<img src='http://maps.co.mecklenburg.nc.us/rest/v1/ws_fins_creekcam.php?camid=3&cachebuster=1455286665105' width='19%'>
+        	<img src='http://maps.co.mecklenburg.nc.us/rest/v1/ws_fins_creekcam.php?camid=4&cachebuster=1455286676201' width='19%'>
+        	<img src='http://maps.co.mecklenburg.nc.us/rest/v1/ws_fins_creekcam.php?camid=6&cachebuster=1455286688354' width='19%'>
+        	<img src='http://maps.co.mecklenburg.nc.us/rest/v1/ws_fins_creekcam.php?camid=7&cachebuster=1455286700930' width='19%'>
+        	<img src='http://maps.co.mecklenburg.nc.us/rest/v1/ws_fins_creekcam.php?camid=8&cachebuster=1455286715090' width='19%'>
+        	<img src='http://maps.co.mecklenburg.nc.us/rest/v1/ws_fins_creekcam.php?camid=9&cachebuster=1455286738834' width='19%'>
+        	<img src='http://maps.co.mecklenburg.nc.us/rest/v1/ws_fins_creekcam.php?camid=10&cachebuster=1455286750154' width='19%'>
+        	<img src='http://maps.co.mecklenburg.nc.us/rest/v1/ws_fins_creekcam.php?camid=14&cachebuster=1455286764826' width='19%'>
+        	</div>
+</body>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Hospitals" id="Hospitals">
+	<SimpleField name="ID" type="int"></SimpleField>
+	<SimpleField name="FID_" type="float"></SimpleField>
+	<SimpleField name="COUNTY" type="string"></SimpleField>
+	<SimpleField name="FACILITY" type="string"></SimpleField>
+	<SimpleField name="TYPE" type="string"></SimpleField>
+	<SimpleField name="MAILING_AD" type="string"></SimpleField>
+	<SimpleField name="ADDRESS2" type="string"></SimpleField>
+	<SimpleField name="CITY" type="string"></SimpleField>
+	<SimpleField name="STATE" type="string"></SimpleField>
+	<SimpleField name="ZIP" type="string"></SimpleField>
+	<SimpleField name="PHONE" type="string"></SimpleField>
+	<SimpleField name="FAX" type="string"></SimpleField>
+	<SimpleField name="LOCADDRESS" type="string"></SimpleField>
+	<SimpleField name="LOCCITY" type="string"></SimpleField>
+	<SimpleField name="LOCST" type="string"></SimpleField>
+	<SimpleField name="LOCZIP" type="float"></SimpleField>
+	<SimpleField name="CAPACITY" type="float"></SimpleField>
+	<SimpleField name="TOTALBEDS" type="float"></SimpleField>
+	<SimpleField name="LATITUDE" type="float"></SimpleField>
+	<SimpleField name="LONGITUDE" type="float"></SimpleField>
+</Schema>
+<Style id="My_Style">
+ <IconStyle> <scale>0.5</scale> <Icon> <href>http://weather.uncc.edu/src/hospital.png</href> </Icon></IconStyle>
+</Style> 
+<Folder><name>Hospitals</name>
+  <Placemark>
+  <styleUrl>#My_Style</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#Hospitals">
+		<SimpleData name="ID">722</SimpleData>
+		<SimpleData name="FID_">953416.00000000000</SimpleData>
+		<SimpleData name="COUNTY">Mecklenburg</SimpleData>
+		<SimpleData name="FACILITY">Presbyterian Orthopaedic Hospital</SimpleData>
+		<SimpleData name="TYPE">Hospital</SimpleData>
+		<SimpleData name="MAILING_AD">1901 Randolph Rd</SimpleData>
+		<SimpleData name="CITY">Charlotte</SimpleData>
+		<SimpleData name="STATE">NC</SimpleData>
+		<SimpleData name="ZIP">28207-1101</SimpleData>
+		<SimpleData name="PHONE">(704)316-2000</SimpleData>
+		<SimpleData name="FAX">(704)316-1803</SimpleData>
+		<SimpleData name="LOCADDRESS">1901 Randolph Rd</SimpleData>
+		<SimpleData name="LOCCITY">Charlotte</SimpleData>
+		<SimpleData name="LOCST">NC</SimpleData>
+		<SimpleData name="LOCZIP">28207.00000000000</SimpleData>
+		<SimpleData name="CAPACITY">0.00000000000</SimpleData>
+		<SimpleData name="TOTALBEDS">156.00000000000</SimpleData>
+		<SimpleData name="LATITUDE">35.21077200000</SimpleData>
+		<SimpleData name="LONGITUDE">-80.82455200000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-80.824552,35.210771999999679</coordinates></Point>
+  </Placemark>
+  <Placemark>
+  <styleUrl>#My_Style</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#Hospitals">
+		<SimpleData name="ID">723</SimpleData>
+		<SimpleData name="FID_">945076.00000000000</SimpleData>
+		<SimpleData name="COUNTY">Mecklenburg</SimpleData>
+		<SimpleData name="FACILITY">Presbyterian Hospital Matthews</SimpleData>
+		<SimpleData name="TYPE">Hospital</SimpleData>
+		<SimpleData name="MAILING_AD">P O Box 3310</SimpleData>
+		<SimpleData name="CITY">Matthews</SimpleData>
+		<SimpleData name="STATE">NC</SimpleData>
+		<SimpleData name="ZIP">28106-3310</SimpleData>
+		<SimpleData name="PHONE">(704)384-6370</SimpleData>
+		<SimpleData name="FAX">(704)384-6515</SimpleData>
+		<SimpleData name="LOCADDRESS">1500 Matthews Township Parkway</SimpleData>
+		<SimpleData name="LOCCITY">Matthews</SimpleData>
+		<SimpleData name="LOCST">NC</SimpleData>
+		<SimpleData name="LOCZIP">28105.00000000000</SimpleData>
+		<SimpleData name="CAPACITY">0.00000000000</SimpleData>
+		<SimpleData name="TOTALBEDS">102.00000000000</SimpleData>
+		<SimpleData name="LATITUDE">35.12171700000</SimpleData>
+		<SimpleData name="LONGITUDE">-80.71401000000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-80.71401,35.12171699999967</coordinates></Point>
+  </Placemark>
+  <Placemark>
+  <styleUrl>#My_Style</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#Hospitals">
+		<SimpleData name="ID">724</SimpleData>
+		<SimpleData name="FID_">990440.00000000000</SimpleData>
+		<SimpleData name="COUNTY">Mecklenburg</SimpleData>
+		<SimpleData name="FACILITY">Presbyterian Hospital Huntersville</SimpleData>
+		<SimpleData name="TYPE">Hospital</SimpleData>
+		<SimpleData name="MAILING_AD">P O Box  3508</SimpleData>
+		<SimpleData name="CITY">Huntersville</SimpleData>
+		<SimpleData name="STATE">NC</SimpleData>
+		<SimpleData name="ZIP">28078-3508</SimpleData>
+		<SimpleData name="PHONE">(704)316-4010</SimpleData>
+		<SimpleData name="FAX">(   )   -</SimpleData>
+		<SimpleData name="LOCADDRESS">10030 Gilead Rd.</SimpleData>
+		<SimpleData name="LOCCITY">Huntersville</SimpleData>
+		<SimpleData name="LOCST">NC</SimpleData>
+		<SimpleData name="LOCZIP">28078.00000000000</SimpleData>
+		<SimpleData name="CAPACITY">0.00000000000</SimpleData>
+		<SimpleData name="TOTALBEDS">50.00000000000</SimpleData>
+		<SimpleData name="LATITUDE">35.40756400000</SimpleData>
+		<SimpleData name="LONGITUDE">-80.86128300000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-80.861283,35.407563999999688</coordinates></Point>
+  </Placemark>
+  <Placemark>
+  <styleUrl>#My_Style</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#Hospitals">
+		<SimpleData name="ID">725</SimpleData>
+		<SimpleData name="FID_">943501.00000000000</SimpleData>
+		<SimpleData name="COUNTY">Mecklenburg</SimpleData>
+		<SimpleData name="FACILITY">Presbyterian Hospital</SimpleData>
+		<SimpleData name="TYPE">Hospital</SimpleData>
+		<SimpleData name="MAILING_AD">P O Box 33549</SimpleData>
+		<SimpleData name="CITY">Charlotte</SimpleData>
+		<SimpleData name="STATE">NC</SimpleData>
+		<SimpleData name="ZIP">28233-3549</SimpleData>
+		<SimpleData name="PHONE">(704)384-4000</SimpleData>
+		<SimpleData name="FAX">(704)384-4296</SimpleData>
+		<SimpleData name="LOCADDRESS">200 Hawthorne Ln</SimpleData>
+		<SimpleData name="LOCCITY">Charlotte</SimpleData>
+		<SimpleData name="LOCST">NC</SimpleData>
+		<SimpleData name="LOCZIP">28204.00000000000</SimpleData>
+		<SimpleData name="CAPACITY">0.00000000000</SimpleData>
+		<SimpleData name="TOTALBEDS">531.00000000000</SimpleData>
+		<SimpleData name="LATITUDE">35.21290900000</SimpleData>
+		<SimpleData name="LONGITUDE">-80.82550100000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-80.825501,35.212908999999684</coordinates></Point>
+  </Placemark>
+  <Placemark>
+  <styleUrl>#My_Style</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#Hospitals">
+		<SimpleData name="ID">732</SimpleData>
+		<SimpleData name="FID_">311.00000000000</SimpleData>
+		<SimpleData name="COUNTY">Mecklenburg</SimpleData>
+		<SimpleData name="FACILITY">Carolinas Specialty Hospital</SimpleData>
+		<SimpleData name="TYPE">Hospital</SimpleData>
+		<SimpleData name="MAILING_AD">Seventh Floor South</SimpleData>
+		<SimpleData name="ADDRESS2">2001 Vail Ave.</SimpleData>
+		<SimpleData name="CITY">Charlotte</SimpleData>
+		<SimpleData name="STATE">NC</SimpleData>
+		<SimpleData name="ZIP">28207</SimpleData>
+		<SimpleData name="PHONE">(704)379-5117</SimpleData>
+		<SimpleData name="FAX">(704)304-6425</SimpleData>
+		<SimpleData name="LOCADDRESS">2001 Vail Ave.</SimpleData>
+		<SimpleData name="LOCCITY">Charlotte</SimpleData>
+		<SimpleData name="LOCST">NC</SimpleData>
+		<SimpleData name="LOCZIP">28207.00000000000</SimpleData>
+		<SimpleData name="CAPACITY">0.00000000000</SimpleData>
+		<SimpleData name="TOTALBEDS">40.00000000000</SimpleData>
+		<SimpleData name="LATITUDE">35.20974400000</SimpleData>
+		<SimpleData name="LONGITUDE">-80.82157200000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-80.821572,35.209743999999667</coordinates></Point>
+  </Placemark>
+  <Placemark>
+  <styleUrl>#My_Style</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#Hospitals">
+		<SimpleData name="ID">734</SimpleData>
+		<SimpleData name="FID_">943092.00000000000</SimpleData>
+		<SimpleData name="COUNTY">Mecklenburg</SimpleData>
+		<SimpleData name="FACILITY">Carolinas Rehabilitation</SimpleData>
+		<SimpleData name="TYPE">Hospital</SimpleData>
+		<SimpleData name="MAILING_AD">1100 Blythe Blvd</SimpleData>
+		<SimpleData name="CITY">Charlotte</SimpleData>
+		<SimpleData name="STATE">NC</SimpleData>
+		<SimpleData name="ZIP">28203</SimpleData>
+		<SimpleData name="PHONE">(704)355-4300</SimpleData>
+		<SimpleData name="FAX">(704)355-4231</SimpleData>
+		<SimpleData name="LOCADDRESS">1100 Blythe Blvd</SimpleData>
+		<SimpleData name="LOCCITY">Charlotte</SimpleData>
+		<SimpleData name="LOCST">NC</SimpleData>
+		<SimpleData name="LOCZIP">28203.00000000000</SimpleData>
+		<SimpleData name="CAPACITY">0.00000000000</SimpleData>
+		<SimpleData name="TOTALBEDS">119.00000000000</SimpleData>
+		<SimpleData name="LATITUDE">35.20150100000</SimpleData>
+		<SimpleData name="LONGITUDE">-80.83770200000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-80.837702,35.201500999999681</coordinates></Point>
+  </Placemark>
+  <Placemark>
+  <styleUrl>#My_Style</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#Hospitals">
+		<SimpleData name="ID">735</SimpleData>
+		<SimpleData name="FID_">943070.00000000000</SimpleData>
+		<SimpleData name="COUNTY">Mecklenburg</SimpleData>
+		<SimpleData name="FACILITY">Carolinas Medical Center/Center for Mental Health</SimpleData>
+		<SimpleData name="TYPE">Hospital</SimpleData>
+		<SimpleData name="MAILING_AD">P O Box 32861</SimpleData>
+		<SimpleData name="CITY">Charlotte</SimpleData>
+		<SimpleData name="STATE">NC</SimpleData>
+		<SimpleData name="ZIP">28232</SimpleData>
+		<SimpleData name="PHONE">(704)355-2000</SimpleData>
+		<SimpleData name="FAX">(704)355-5073</SimpleData>
+		<SimpleData name="LOCADDRESS">1000 Blythe Blvd</SimpleData>
+		<SimpleData name="LOCCITY">Charlotte</SimpleData>
+		<SimpleData name="LOCST">NC</SimpleData>
+		<SimpleData name="LOCZIP">28232.00000000000</SimpleData>
+		<SimpleData name="CAPACITY">0.00000000000</SimpleData>
+		<SimpleData name="TOTALBEDS">874.00000000000</SimpleData>
+		<SimpleData name="LATITUDE">35.20343100000</SimpleData>
+		<SimpleData name="LONGITUDE">-80.83757200000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-80.837572,35.203430999999661</coordinates></Point>
+  </Placemark>
+  <Placemark>
+  <styleUrl>#My_Style</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#Hospitals">
+		<SimpleData name="ID">736</SimpleData>
+		<SimpleData name="FID_">923516.00000000000</SimpleData>
+		<SimpleData name="COUNTY">Mecklenburg</SimpleData>
+		<SimpleData name="FACILITY">Carolinas Medical Center-University</SimpleData>
+		<SimpleData name="TYPE">Hospital</SimpleData>
+		<SimpleData name="MAILING_AD">P O Box 560727</SimpleData>
+		<SimpleData name="CITY">Charlotte</SimpleData>
+		<SimpleData name="STATE">NC</SimpleData>
+		<SimpleData name="ZIP">28256</SimpleData>
+		<SimpleData name="PHONE">(704)863-6000</SimpleData>
+		<SimpleData name="FAX">(704)863-6236</SimpleData>
+		<SimpleData name="LOCADDRESS">8800 North Tryon St</SimpleData>
+		<SimpleData name="LOCCITY">Charlotte</SimpleData>
+		<SimpleData name="LOCST">NC</SimpleData>
+		<SimpleData name="LOCZIP">28262.00000000000</SimpleData>
+		<SimpleData name="CAPACITY">0.00000000000</SimpleData>
+		<SimpleData name="TOTALBEDS">130.00000000000</SimpleData>
+		<SimpleData name="LATITUDE">35.30757100000</SimpleData>
+		<SimpleData name="LONGITUDE">-80.74813500000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-80.748135,35.307570999999676</coordinates></Point>
+  </Placemark>
+  <Placemark>
+  <styleUrl>#My_Style</styleUrl>
+	<ExtendedData><SchemaData schemaUrl="#Hospitals">
+		<SimpleData name="ID">739</SimpleData>
+		<SimpleData name="FID_">923352.00000000000</SimpleData>
+		<SimpleData name="COUNTY">Mecklenburg</SimpleData>
+		<SimpleData name="FACILITY">Carolinas Medical Center Mercy/Pineville</SimpleData>
+		<SimpleData name="TYPE">Hospital</SimpleData>
+		<SimpleData name="MAILING_AD">2001 Vail Ave</SimpleData>
+		<SimpleData name="CITY">Charlotte</SimpleData>
+		<SimpleData name="STATE">NC</SimpleData>
+		<SimpleData name="ZIP">28207</SimpleData>
+		<SimpleData name="PHONE">(704)304-5000</SimpleData>
+		<SimpleData name="FAX">(704)304-5695</SimpleData>
+		<SimpleData name="LOCADDRESS">10628 Park Rd</SimpleData>
+		<SimpleData name="LOCCITY">Charlotte</SimpleData>
+		<SimpleData name="LOCST">NC</SimpleData>
+		<SimpleData name="LOCZIP">28210.00000000000</SimpleData>
+		<SimpleData name="CAPACITY">0.00000000000</SimpleData>
+		<SimpleData name="TOTALBEDS">305.00000000000</SimpleData>
+		<SimpleData name="LATITUDE">35.09125600000</SimpleData>
+		<SimpleData name="LONGITUDE">-80.86963700000</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-80.869637,35.091255999999682</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

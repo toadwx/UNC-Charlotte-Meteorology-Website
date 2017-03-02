@@ -1,0 +1,146 @@
+/* Global */
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height:100%;
+    /*font-family: Verdana, Arial, Helvetica, sans-serif; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-size: 10pt;
+    /* temporary yellow background color while working */
+    /* background-color: #fff000; */
+    /* background color to match the iframe */
+    background-color: #f6f9f7;
+    /* background-image: url('backgrounds/band.gif'); */
+    background-repeat: repeat;
+    background-attachment: scroll;
+    color:#FFFFFF;
+}
+
+#header { position:relative; background:#00703C;z-index: -1;}
+
+#skoolLogo {position: absolute; right:5px; top:-14px;z-index:100;}
+
+/* NAVIGATION TABS */
+/*
+#navtabs {
+margin: 0;
+ padding-bottom:10px;
+ padding-top: 10px;
+ margin-left:auto;
+ margin-right:auto;
+ position:relative;
+ text-align:center;
+ background:rgba(255,255,255,0.2);
+ width:75%;
+ border-radius: 80px 80px 80px 80px;
+ }	
+#navtabs li {
+ display:inline; height:50px;
+ }
+ #navtabs li a {
+ text-decoration: none;
+ } 
+ a {
+  color: inherit; /* blue colors for links too *//*
+  text-decoration: inherit; /* no underline *//*
+}
+.navigate
+{
+    font:  bold italic 14px sans-serif;
+    text-decoration: none;
+    position: relative;
+    padding: 7px 16px;
+    border: 0px solid #0066CC;
+    border-bottom-color:#0066CC;
+    color: #FFFFFF;
+    background: linear-gradient(#0000AF,#00003F);
+    border-radius: 20px 0px 20px 0;
+    outline:none;
+}
+        
+.navigate:hover
+{
+    background:linear-gradient(#0000AF,#FFFFFF);
+    color: #222222;
+}   
+*/
+
+/* AQI DATA - LEFT COLUMN */
+#AQIlocal{/*AQI Container*/
+	float:left;
+	width:600px;
+}
+#container{
+/*    width:730px;
+    height:318px; */
+    width:600px;
+    height:290px;
+    border:2px solid #000; 
+    overflow:hidden;
+}
+#container2{
+    width:600px;
+    height:250px;
+    border:2px solid #000; 
+    overflow:hidden;
+}
+
+#container iframe {
+    width:1500px;
+/*    height:3500px;
+    margin-top:790px;
+    width:1500px; */
+    height:2900px;
+    margin-top:135px;
+	margin-left: -130px;
+    border:0 solid;
+ }
+ #container2 iframe {
+    width:1500px;
+    height:2900px;
+    margin-top:135px;
+	margin-left: -130px;
+    border:0 solid;
+ }
+ .hidelogo{
+    position: absolute;
+    width: 130px;
+    height: 20px;
+    /* purple for when working for getting position right*/
+    background: #f00ff0;
+    /* background: #f6f9f7; */
+    margin-top: -690px;
+	margin-left: 292px;
+    display: block;
+    color: #f6f9f7;
+}
+ .hidelogo2{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    /* black for when working for getting position right*/
+    background: #000000;
+    /* background: #f6f9f7; */
+/*    margin-top: -327px;
+	margin-left: 292px;*/
+    margin-top: -50%;
+	margin-left: 60%;
+    display: block;
+    color: #f6f9f7;
+}
+ 
+
+/* RIGHT COLUMN */
+
+#AQItable{
+	float: right;
+	width: 25%;
+}
+#AQItable > div{
+	display: inline-block;
+}
+div.inlineL { float:left; }
+div.inlineR { float:right;}

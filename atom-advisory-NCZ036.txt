@@ -1,0 +1,50 @@
+<feed
+xmlns = 'http://www.w3.org/2005/Atom'
+xmlns:cap = 'urn:oasis:names:tc:emergency:cap_1.1'
+xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
+>
+
+<!-- TZN = <EST> -->
+<!-- TZO = <-5> -->
+<!-- http-date = Mon, 07 Nov 2016 07:42:00 GMT -->
+<id>https://alerts.weather.gov/cap/wwaatmget.php?x=NCZ036&amp;y=0</id>
+<generator>NWS CAP Server</generator>
+<updated>2016-11-07T14:42:00-05:00</updated>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Current Watches, Warnings and Advisories for Iredell (NCZ036) North Carolina Issued by the National Weather Service</title>
+<link href='https://alerts.weather.gov/cap/wwaatmget.php?x=NCZ036&amp;y=0'/>
+<entry>
+<id>https://alerts.weather.gov/cap/wwacapget.php?x=NC12561FA1F158.FrostAdvisory.12561FB05FE0NC.GSPNPWGSP.a9b9323c4683d97c1ff412dc821e38af</id>
+<updated>2016-11-07T14:42:00-05:00</updated>
+<published>2016-11-07T14:42:00-05:00</published>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Frost Advisory issued November 07 at 2:42PM EST until November 08 at 9:00AM EST by NWS</title>
+<link href="https://alerts.weather.gov/cap/wwacapget.php?x=NC12561FA1F158.FrostAdvisory.12561FB05FE0NC.GSPNPWGSP.a9b9323c4683d97c1ff412dc821e38af"/>
+<summary>...FROST ADVISORY IN EFFECT FOR MUCH OF WESTERN NORTH CAROLINA... .FROST IS EXPECTED TO FORM OVERNIGHT IN MUCH OF WESTERN NORTH CAROLINA. DAMAGE TO TENDER VEGETATION IS POSSIBLE. ...FROST ADVISORY IN EFFECT FROM 3 AM TO 9 AM EST TUESDAY... THE NATIONAL WEATHER SERVICE IN GREENVILLE-SPARTANBURG HAS ISSUED A FROST ADVISORY...WHICH IS IN EFFECT FROM 3 AM TO 9 AM EST</summary>
+<cap_event>Frost Advisory</cap_event>
+<cap_effective>2016-11-07T14:42:00-05:00</cap_effective>
+<cap_expires>2016-11-08T09:00:00-05:00</cap_expires>
+<cap_status>Actual</cap_status>
+<cap_msgType>Alert</cap_msgType>
+<cap_category>Met</cap_category>
+<cap_urgency>Expected</cap_urgency>
+<cap_severity>Minor</cap_severity>
+<cap_certainty>Likely</cap_certainty>
+<cap_areaDesc>Alexander; Avery; Buncombe; Burke Mountains; Cabarrus; Caldwell Mountains; Catawba; Cleveland; Davie; Eastern McDowell; Eastern Polk; Gaston; Graham; Greater Burke; Greater Caldwell; Greater Rutherford; Haywood; Henderson; Iredell; Lincoln; Macon; Madison; McDowell Mountains; Mecklenburg; Mitchell; Northern Jackson; Polk Mountains; Rowan; Rutherford Mountains; Southern Jackson; Swain; Transylvania; Union; Yancey</cap_areaDesc>
+<cap_polygon></cap_polygon>
+<cap_geocode>
+<valueName>FIPS6</valueName>
+<value>037003 037011 037021 037023 037025 037027 037035 037045 037059 037071 037075 037087 037089 037097 037099 037109 037111 037113 037115 037119 037121 037149 037159 037161 037173 037175 037179 037199</value>
+<valueName>UGC</valueName>
+<value>NCZ033 NCZ035 NCZ036 NCZ037 NCZ048 NCZ049 NCZ050 NCZ051 NCZ052 NCZ053 NCZ056 NCZ057 NCZ058 NCZ059 NCZ062 NCZ063 NCZ064 NCZ065 NCZ068 NCZ069 NCZ070 NCZ071 NCZ072 NCZ082 NCZ501 NCZ502 NCZ503 NCZ504 NCZ505 NCZ506 NCZ507 NCZ508 NCZ509 NCZ510</value>
+</cap_geocode>
+<cap_parameter>
+<valueName>VTEC</valueName>
+<value>/O.NEW.KGSP.FR.Y.0011.161108T0800Z-161108T1400Z/</value>
+</cap_parameter>
+</entry>
+</feed>

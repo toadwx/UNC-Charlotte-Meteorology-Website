@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<!--
+UNCC Radar Site Selector
+Developed By: Warren Pettee (wpettee.at.uncc.edu (@wpettee(Twitter))
+This page is intended to help users more easily select radar images for our
+region that have been previously generated and transferred to the webserver
+
+TDWR availability is particularly poor without paying an arm and a leg, which for
+our region is unacceptable. Charlotte TDWR is practically the ONLY full coverage
+site for the area. Thus, the objective is to increase availability to better student 
+training, and ultimately public safety in the area through product dissemination 
+free of charge. --
+-->
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title>Radar Room</title>
+		<link rel="shortcut icon" href="http://weather.uncc.edu/src/g4027.ico">
+		<link href="main.css" rel="stylesheet" type="text/css" />
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-54843224-1', 'auto');
+                  ga('require', 'displayfeatures');
+		  ga('send', 'pageview');
+
+		</script>
+		<script>
+			function startTime() {
+				var today=new Date();
+				var h=today.getHours();
+				var m=today.getMinutes();
+				var s=today.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById('txt').innerHTML = h+":"+m+":"+s+" UTC";
+				var t = setTimeout(function(){startTime()},500);
+			}
+
+			function checkTime(i) {
+				if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+				return i;
+			}
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+		<script type="text/javascript">// <![CDATA[
+			$(document).ready(function() {
+			$.ajaxSetup({ cache: false }); // This part addresses an IE bug. without it, IE will only load the first number and will never refresh
+			setInterval(function() {
+			$('#frame').load('weather.uncc.edu');
+			}, 60000); // the "3000" here refers to the time to refresh the div. it is in milliseconds.
+			});
+		// ]]></script>
+		
+	</head>
+	
+	<DIV class=loop>
+		<FONT color="yellow"><b>Controls</b></FONT>
+	   <table>
+		<tr>
+			<td><A HREF="JavaScript: func()" onClick="change_mode(1);rev()"><IMG BORDER=0 HSPACE=0 VSPACE=0 WIDTH=25 HEIGHT=25 SRC="http://weather.uncc.edu/radar/src/button_rev.gif" ALT="Rev"></A>
+			<A HREF="JavaScript: func()" onClick="stop()"><IMG BORDER=0 HSPACE=0 VSPACE=0 WIDTH=25 HEIGHT=25 SRC="http://weather.uncc.edu/radar/src/button_stop.gif" ALT="Stop"></A>
+			<A HREF="JavaScript: func()" onClick="change_mode(1);fwd()"><IMG BORDER=0 HSPACE=0 VSPACE=0 WIDTH=25 HEIGHT=25 SRC="http://weather.uncc.edu/radar/src/button_fwd.gif" ALT="Fwd"></A>
+			<A HREF="JavaScript: func()" onClick="change_speed(delay_step)"><IMG BORDER=0  HSPACE=0 VSPACE=0 WIDTH=25 HEIGHT=25 SRC="http://weather.uncc.edu/radar/src/button_slow.gif" ALT="slow"></A>
+			<A HREF="JavaScript: func()" onClick="change_speed(-delay_step)"><IMG BORDER=0 HSPACE=0 VSPACE=0 WIDTH=25 HEIGHT=25 SRC="http://weather.uncc.edu/radar/src/button_fast.gif" ALT="fast"></A></td>
+		</tr>
+		<tr>
+			<FORM METHOD="POST" NAME="control_form"> <FONT size=-1 color="white">Frame #:</FONT>
+				<INPUT TYPE="text" Style="border: 1px dotted;border-color:#008B00;background-color: #000000;color:#ffffff;" NAME="frame_nr" VALUE=9 SIZE="2" onFocus="this.select()" onChange="go2image(this.value)"></INPUT><BR>
+			</FORM>
+		</tr>		      
+		</table>
+	</DIV>
+	
+	<DIV class=slider>
+	<FONT color="yellow">Frame Mouse-over Controls</FONT>
+		<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0>
+			<TR>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc0',0) onMouseout=img_inact('toc0')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc0'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc1',1) onMouseout=img_inact('toc1')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc1'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc2',2) onMouseout=img_inact('toc2')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc2'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc3',3) onMouseout=img_inact('toc3')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc3'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc4',4) onMouseout=img_inact('toc4')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc4'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc5',5) onMouseout=img_inact('toc5')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc5'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc6',6) onMouseout=img_inact('toc6')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc6'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc7',7) onMouseout=img_inact('toc7')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc7'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc8',8) onMouseout=img_inact('toc8')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc8'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc9',9) onMouseout=img_inact('toc9')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc9'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc10',10) onMouseout=img_inact('toc10')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc10'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc11',11) onMouseout=img_inact('toc11')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc11'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc12',12) onMouseout=img_inact('toc12')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc12'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc13',13) onMouseout=img_inact('toc13')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc13'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc14',14) onMouseout=img_inact('toc14')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc14'></a></TD>	
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc15',15) onMouseout=img_inact('toc15')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc15'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc16',16) onMouseout=img_inact('toc16')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc16'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc17',17) onMouseout=img_inact('toc17')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc17'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc18',18) onMouseout=img_inact('toc18')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc18'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc19',19) onMouseout=img_inact('toc19')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc19'></a></TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<script type="text/javascript" src="http://weather.uncc.edu/radar/src/animate.js"></script>
+	<script type="text/javascript" src="http://weather.uncc.edu/radar/src/slider.js"></script>
+	<body onLoad="launch()">
+		<noscript>
+		 JavaScript must be enabled to use this site.
+		 Here are <a href="http://www.enable-javascript.com/" target="_blank">
+		 instructions on how to enable JavaScript in your web browser</a>.
+		</noscript>
+		<div id="txt"></div>
+		<div id="header">
+			<br>
+			<h1 style="margin-top:0px; margin-bottom:10px;text-align:center;color:#ffffff;">Radar Room</h1>
+			<br>
+		</div>
+		<div id="siteLogo">
+			<p align="right">
+			<a href="http://weather.uncc.edu/"><img id = "logoImg" src="http://weather.uncc.edu/radar/src/radarlogotri.png"  width="8%" height="8%"/></a>
+			</p>
+		</div>
+		<div id="skoolLogo">
+			<p align="right">
+			<a href="http://www.uncc.edu/"><img id = "logoImg2" src="http://weather.uncc.edu/radar/src/UNCC_Crown_Logo_1c.png"  width="80%" height="80%"/></a>
+			</p>
+		</div>
+		<ul id="tabs">
+		<li id="tab1"><a href="http://weather.uncc.edu/"> <img src="http://weather.uncc.edu/src/button_station.png" onmouseover="this.src='http://weather.uncc.edu/src/button_station_hover.png'" onmouseout="this.src='http://weather.uncc.edu/src/button_station.png'" height="10%" width="10%"> </a></li>
+		<li id="tab2"><a href="http://weather.uncc.edu/obs/"><img src="http://weather.uncc.edu/src/button_obs.png" onmouseover="this.src='http://weather.uncc.edu/src/button_obs_hover.png'" onmouseout="this.src='http://weather.uncc.edu/src/button_obs.png'" height="10%" width="10%"></a></li>
+		<li id="tab3"><a href="http://weather.uncc.edu/radar/"><img src="http://weather.uncc.edu/src/button_radar_push.png" onmouseover="this.src='http://weather.uncc.edu/src/button_radar_hover.png'" onmouseout="this.src='http://weather.uncc.edu/src/button_radar_push.png'" height="10%" width="10%"></a></li>
+		<li id="tab4"><a href="http://weather.uncc.edu/models"><img src="http://weather.uncc.edu/src/button_models.png" onmouseover="this.src='http://weather.uncc.edu/src/button_models_hover.png'" onmouseout="this.src='http://weather.uncc.edu/src/button_models.png'" height="10%" width="10%"></a></li>
+		<li id="tab5"><a href="http://weather.uncc.edu/climate"><img src="http://weather.uncc.edu/src/button_climate.png" onmouseover="this.src='http://weather.uncc.edu/src/button_climate_hover.png'" onmouseout="this.src='http://weather.uncc.edu/src/button_climate.png'" height="10%" width="10%"></a></li>
+		<li id="tab6"><a href="http://weather.uncc.edu/res"><img src="http://weather.uncc.edu/src/button_resources.png" onmouseover="this.src='http://weather.uncc.edu/src/button_resources_hover.png'" onmouseout="this.src='http://weather.uncc.edu/src/button_resources.png'" height="10%" width="10%"></a></li>
+		<li id="tab7"><a href="http://weather.uncc.edu/faq"><img src="http://weather.uncc.edu/src/button_contact.png" onmouseover="this.src='http://weather.uncc.edu/src/button_contact_hover.png'" onmouseout="this.src='http://weather.uncc.edu/src/button_contact.png'" height="10%" width="10%"></a></li>
+		</ul>
+		<div id="picker">
+			<h3 style="margin-top:0;margin-bottom:0;text-align:center;color:#ffffff;">Radar Selector</h3>
+			<form name="doublecombo">
+				<p><select name="example" size="1" onChange="redirect(this.options.selectedIndex)">
+					<option value="CLT">CLT TDWR</option>
+					<option value="RDU" style="background-color: red;" >RDU TDWR</option>
+					<option value="DCA" style="background-color: red;" >DCA TDWR</option>
+					<option value="IAD" style="background-color: red;" >IAD TDWR</option>
+					<option value="GSP">GSP 88D</option>
+					<option value="RAX" style="background-color: red;" >RAX 88D</option>
+					<option value="FCX" style="background-color: red;" >FCX 88D</option>
+					<option value="MHX" style="background-color: red;" >MHX 88D</option>
+					<option value="LTX" style="background-color: red;" >LTX 88D</option>
+					<option value="CLX" style="background-color: red;" >CLX 88D</option>
+					<option value="CAE" style="background-color: red;" >CAE 88D</option>
+					<option value="AKQ" style="background-color: red;" >AKQ 88D</option>
+					<option value="LWX" style="background-color: red;" >LWX 88D</option>
+				</select>
+				<select name="stage2" size="1">
+					<option value="CLT/TZL" title="Long Range Base Reflectivity" style="background-color: red;">TZL</option>
+					<option value="CLT/TR0" title="Base Reflectivity Tilt 0">TR0</option>
+					<option value="CLT/TR1" title="Base Reflectivity Tilt 1">TR1</option>
+					<option value="CLT/TR2" title="Base Reflectivity Tilt 2">TR2</option>
+					<option value="CLT/TV0" title="Base Radial Velocity Tilt 0" style="background-color: red;">TV0</option>
+					<option value="CLT/TV1" title="Base Radial Velocity Tilt 1" style="background-color: red;">TV1</option>
+					<option value="CLT/TV2" title="Base Radial Velocity Tilt 2" style="background-color: red;">TV2</option>
+					<option value="CLT/DHR" title="Digital Hybrid Scan Reflectivity" style="background-color: red;">DHR</option>
+					<option value="CLT/NCR" title="Composite Reflectivity" style="background-color: red;">NCR</option>
+					<option value="CLT/NET" title="Echo Tops" style="background-color: red;">NET</option>
+					<option value="CLT/NVW" title="Velocity Azimuth Display Wind Profile" style="background-color: red;">NVW</option>
+					<option value="CLT/NVL" title="Vertical Integrated Liquid" style="background-color: red;">NVL</option>
+					<option value="CLT/NST" title="Storm Tracking Information" style="background-color: red;">NST</option>
+					<option value="CLT/NHI" title="Hail Index" style="background-color: red;">NHI</option>
+					<option value="CLT/NTV" title="Tornadic Vortex Signature" style="background-color: red;">NTV</option>
+					<option value="CLT/FTM" title="Free Text Message" style="background-color: red;">FTM</option>
+					<option value="CLT/N1P" title="1hr Surface Rainfall Accumulation" style="background-color: red;">N1P</option>
+					<option value="CLT/NTP" title="Storm Total Rainfall Accumulation" style="background-color: red;">NTP</option>
+					<option value="CLT/TZL" title="Digital Precipitation Array" style="background-color: red;">DPA</option>
+					<option value="CLT/SPD" title="Supplemental Precipitation Data" style="background-color: red;">SPD</option>
+					<option value="CLT/DSP" title="Digital Storm Total Precipitation" style="background-color: red;">DSP</option>
+					<option value="CLT/NMD" title="Mesocyclone" style="background-color: red;">NMD</option>>
+				</select>
+				<INPUT TYPE="Button" VALUE="Select" onClick="changeProduct();">
+				<script type="text/javascript" src="comboSiteSwap.js"></script>
+				<script type="text/javascript" src="http://weather.uncc.edu/radar/src/animate.js"></script>
+				<script type="text/javascript" src="http://weather.uncc.edu/radar/src/slider.js"></script>
+				</p>
+			</form>
+		</div>
+		<DIV id="frame" class=img>          
+			<IMG name="animation" border=0 src="http://weather.uncc.edu/data/nexrad/CLT/TR0_1.gif">
+		</DIV>
+		<div class="side" title="Info">
+			<h2 style="margin-top:0;margin-bottom:0;text-align:center;color:#ffffff;">Information</h2>	
+			<br>
+			<p align="justify">
+			This is the UNC Charlotte Meteorology Program, Radar Room, providing plots for radar sites in the NC/VA/SC/GA region.<br><br>
+			
+			Product generation here is actually quite simple: selected data from our LDM is decoded and plotted via GEMPAK into gif frames. It isn't the prettiest system, but it works. We are working on
+			providing WSR-88D and TDWR products from our region. Mistakes were and probably will be made along the way. Let us know if there are missing products, mis-labeled products, or products that would be more useful if presented differently. To give feedback, suggestions, 
+			or complaints on any of the services provided here, feel free to contact us.<br><br></p>
+			Warren Pettee (@wpettee)<br>
+			Dr. Brian Magi (@brianmagi)<br>
+			<i>Further contact information is available at: <a href="weather.uncc.edu">weather.uncc.edu</a></i>
+			<br><br>
+			<p>For a printable radar product (and identifier) cheat sheet from NWS, <a href="http://www.nws.noaa.gov/tg/pdf/rpccds_radar_products.pdf">click here!</a>
+			<br><br>
+		</div>
+		<div class="side" title="Alerts">
+			<h2 style="margin-top:0;margin-bottom:0;text-align:center;color:#ffffff;">Alerts</h2>	
+			<br>
+			<p align="justify">
+			Perhaps this tab will feature local watches/warnings, and perhaps the tab will flash and make a funny, obnoxious noise when an alert arrives. But for now, this is a useless tab.
+		</div>
+		<div class="side" title="Bugs">
+			<h2 style="margin-top:0;margin-bottom:0;text-align:center;color:#ffffff;">Bug List</h2>	
+			<br>
+			<p align="justify">
+			We apologize for the lack of TDWR products. The visualization software we use (GEMPAK7) has several compatibility issues with terminal doppler products. Unidata has been notified of the problem and
+			they are working on a solution. Hopefully we will have products up in the near future. All NEXRAD products are compatible, so be looking for more NEXRAD products soon!
+		</div>
+		<script type="text/javascript" src="http://weather.uncc.edu/radar/src/jquery.min.js"></script>
+		<script type="text/javascript" src="http://weather.uncc.edu/radar/src/jquery.sidecontent.js"></script>
+		<script type="text/javascript">
+			$(".side").sidecontent();
+		</script>
+	</body>
+</html>

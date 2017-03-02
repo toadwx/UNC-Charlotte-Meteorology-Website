@@ -1,0 +1,193 @@
+/* Global */
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height:100%;
+    /*font-family: Verdana, Arial, Helvetica, sans-serif; */
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-size: 10pt;
+    /* temporary yellow background color while working */
+    /* background-color: #fff000; */
+    /* background color to match the iframe */
+    background-color: #f6f9f7;
+    /* background-image: url('backgrounds/band.gif'); */
+    background-repeat: repeat;
+    background-attachment: scroll;
+    color:#FFFFFF;
+}
+
+#header { position:relative; background:#00703C;z-index: -1;}
+
+#skoolLogo {position: absolute; right:5px; top:-14px;z-index:100;}
+
+/* NAVIGATION TABS */
+/*
+#navtabs {
+margin: 0;
+ padding-bottom:10px;
+ padding-top: 10px;
+ margin-left:auto;
+ margin-right:auto;
+ position:relative;
+ text-align:center;
+ background:rgba(255,255,255,0.2);
+ width:75%;
+ border-radius: 80px 80px 80px 80px;
+ }	
+#navtabs li {
+ display:inline; height:50px;
+ }
+ #navtabs li a {
+ text-decoration: none;
+ } 
+ a {
+  color: inherit; /* blue colors for links too *//*
+  text-decoration: inherit; /* no underline *//*
+}
+.navigate
+{
+    font:  bold italic 14px sans-serif;
+    text-decoration: none;
+    position: relative;
+    padding: 7px 16px;
+    border: 0px solid #0066CC;
+    border-bottom-color:#0066CC;
+    color: #FFFFFF;
+    background: linear-gradient(#0000AF,#00003F);
+    border-radius: 20px 0px 20px 0;
+    outline:none;
+}
+        
+.navigate:hover
+{
+    background:linear-gradient(#0000AF,#FFFFFF);
+    color: #222222;
+}   
+*/
+
+/* AQI DATA - LEFT COLUMN */
+#AQIlocal{/*AQI Container*/
+	float:left;
+	width:730px;
+}
+#container{
+    width:730px;
+    height:317px;
+    border:0px solid #000; 
+    overflow:hidden;
+}
+#container2{
+    width:730px;
+    height:271px;
+    border:0px solid #000; 
+    overflow:hidden;
+}
+
+#container iframe {
+    width:1500px;
+/*    height:3500px;
+    margin-top:790px;
+    width:1500px; */
+    height:2900px;
+    margin-top:610px;
+	margin-left: 48px;
+    border:0 solid;
+ }
+ #container2 iframe {
+    width:1500px;
+    height:2900px;
+    margin-top:610px;
+	margin-left: 48px;
+    border:0 solid;
+ }
+ 
+ .hidelogo{
+    position: absolute;
+    width: 280px;
+    height: 25px;
+    /* purple for when working for getting position right*/
+    /* background: #f00ff0; */
+    background: #f6f9f7;
+    /* more negative top moves it up */
+    margin-top: -775px;
+	margin-left: 360px;
+    display: block;
+    color: #f6f9f7;
+}
+ .hidelogo2{
+    position: absolute;
+    width: 280px;
+    height: 25px;
+    /* black for when working for getting position right*/
+    /* background: #000000; */
+    background: #f6f9f7;
+    /* more negative top moves it up */
+    margin-top: -330px;
+	margin-left: 360px;
+    display: block;
+    color: #f6f9f7;
+}
+
+/* RIGHT COLUMN */
+
+#AQInonlocal{
+	float: right;
+	width: 50%;
+}
+#container3{
+    width:730px;
+    height:316px;
+    border:0px solid #000; 
+    overflow:hidden;
+}
+#container4{
+    width:800px;
+    height:440px;
+    border:1px solid #000; 
+    overflow:hidden;
+}
+#container3 iframe {
+    width:1500px;
+    height:2800px;
+    margin-top:565px;
+	margin-left: 48px;
+    border:0 solid;
+ }
+#container4 iframe {
+    width:1500px;
+    height:2800px;
+    margin-top:-1200px;
+	margin-left: -400px;
+    border:0 solid;
+ }
+.hidelogo3{
+    position: absolute;
+    width: 280px;
+    height: 35px;
+    /* green when working for getting position right*/
+    /* background: #0fff00; */
+    background: #f6f9f7;
+    /* more negative top moves it up */
+    margin-top: -327px;
+	margin-left: -439px;
+    display: block;
+    color: #f6f9f7;
+}
+/* .hidelogo4{
+    position: absolute;
+    width: 230px;
+    height: 20px;
+    background: #f6f9f7;
+    margin-top: -140px;
+	margin-left: 250px;
+    display: block;
+    color: #f6f9f7;
+}*/
+#AQInonlocal > div{
+	display: inline-block;
+}
+div.inlineL { float:left; }
+div.inlineR { float:right;}

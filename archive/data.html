@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-54843224-1', 'auto');
+			ga('require', 'displayfeatures');
+			ga('send', 'pageview');
+		</script>
+		<title>UNC Charlotte Wx</title>
+		<link rel="stylesheet" type="text/css" href="archive.css"/>
+		<!--Load the AJAX API-->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<style>
+			body{
+				background-image: url("archiveBack.png");
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+			.downloadDialog{
+				background: #dee5ef;
+				border-radius: 10px 10px 10px 10px;
+				width: 20%;
+				padding:10px;
+				color: black;
+			}
+		</style>
+		<script>
+			// UNCC ARCHIVE FORM VALIDATION
+			// The form is validated before it can even be sent to the PHP Script...
+			unccArchiveValidate(form)
+			{
+				fail = ""
+				if (form.startDate.value == "") fail = "No Start Date Was Entered!\n"
+				else if (form.endDate.value == "") fail = "No End Date Was Entered!\n"
+				
+				if (fail == "") {
+					return true
+				} 
+				else {alert(fail); return false }
+			}
+		</script>
+	</head>
+	<body>
+		<form method="post" action="requestData.php" onsubmit="return unccArchiveValidate(this)" class="downloadDialog">
+			<h2>McEniry Weather Station Archived Data</h2>
+			<p>This will allow you to download data from our Davis Instruments Vantage Pro 2 weather station. Data is available from
+				the last timestamp until 25-Jan-2015. We are working on having data available from an older archive that dates to 
+				1-Jul-2013 but that will not be available until a later date... <br><br>
+				Limit the size of your request to avoid any memory errors.</p>
+			<!-- Oldest Data: 25 Jan 2015 19:20:00 -->
+			Start Date: <input type="datetime-local" name="startDate" min="2015-01-25T19:20:00"><br>
+			End Date: <input type="datetime-local" name="endDate" min="2015-01-25T19:20:00"><br>
+			<input type="submit" value="Download CSV">
+		</form>
+	</body>
+</html>

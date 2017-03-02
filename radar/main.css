@@ -1,0 +1,248 @@
+html { height: 100% }
+body { background-color: #000000;height: 100%; margin: 0; padding: 0 }
+
+#masthead { position:relative; background:rgba(255,0,0,0.0); z-index: 1;
+		}
+
+#masthead h1 {
+    color: #FFFFFF;text-align: center; margin-top:0px; margin-bottom:0px; padding-top:15px;
+}
+
+#masthead h2 {
+      font: italic 24px "times new roman"; text-align: center; color: #FFFFFF; margin-top:0px; margin-bottom:15px; padding-top:5px;
+}
+#siteLogo { position: absolute; right:5px; top:0px;}
+#skoolLogo {position: absolute; left:0px; top:0px;}
+#navtabs {
+margin: 0;
+ padding-bottom:10px;
+ padding-top: 10px;
+ margin-left:auto;
+ margin-right:auto;
+ position:relative;
+ text-align:center;
+ /*display: inline-block;*/
+ background:rgba(255,255,255,0.2);
+ width:65%;
+ border-radius: 0px 0px 80px 80px;
+ }	
+#navtabs li {
+ display:inline; height:50px;
+ }
+ #navtabs li a {
+ text-decoration: none;
+ /*padding: 0.05em 0.05em;*/
+ } 
+ a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+.navigate
+{
+    font:  bold italic 12px sans-serif;
+    text-decoration: none;
+    position: relative;
+    padding: 7px 16px;
+    border: 0px solid #0066CC;
+    border-bottom-color:#0066CC;
+    color: #FFFFFF;
+    background: linear-gradient(#0000AF,#00003F);
+    border-radius: 20px 0px 20px 0;
+    outline:none;
+}
+        
+.navigate:hover
+{
+    background:linear-gradient(#0000AF,#FFFFFF);
+    color: #222222;
+}
+.loop
+{
+	background: rgba(255,255,255,0.4);
+}
+.slider
+{
+	background: rgba(255,255,255,0.4);
+	text-align: center;
+}
+#picker { border: 2px solid;border-color:#008B00; border-radius: 10px; position: relative;
+	top:85px; width:300px;color:#33CC33;padding-left: 25px;background:rgba(255,255,255,0.5);}
+#selector { border: 2px solid;border-color:#008B00; border-radius: 10px; position: relative;
+top:230px; width:22%;color:#33CC33;padding-left: 25px;padding-right:25px;background:rgba(255,255,255,0.5);float:left;padding-bottom:1%;padding-top:1%;}
+#frame { position: relative; top: 5%; float:right; z-index:3;}
+#helpFrame {border: 2px solid;border-radius: 25px;border-color:#008B00;position: absolute; right:0px;
+	top:200px; width:350px;color:#ffffff;padding-left: 25px; padding-right: 25px; float:right; font-size: 9pt; }
+#txt { color:#ffffff; position: absolute; top:30px; left:30px;text-align:center;}
+DIV.slider { 
+	border: 2px solid;
+	border-color:#008B00; 
+	border-radius: 10px; 
+	padding-left: 15px; 
+	padding-right: 15px; 
+	padding-top: 15px; 
+	padding-bottom: 15px; 
+	position: absolute; 
+	left: 5px; 
+	top:178px
+}
+DIV.loop { 
+	border: 2px solid;
+	border-color:#008B00; 
+	border-radius: 10px; 
+	padding-left: 15px; 
+	padding-right: 15px; 
+	padding-top: 15px; 
+	padding-bottom: 5px; 
+	position: absolute; 
+	left: 55px; 
+	top:100px
+}
+
+ .climoP
+{
+    font: bold 12px helvetica;
+    text-decoration: none;
+    position: relative;
+    padding: 10px 1px;
+    border: 1px solid #0066CC;
+    border-bottom-color:#0066CC;
+    color: #FFFFFF;
+    background: linear-gradient(#0000BF,#00003F);
+    border-radius: 10px 10px 10px 10px;
+    outline:none;
+    text-align:center;
+    width:35%;
+    display:inline-block;
+}
+        
+.climoP:hover
+{
+	background: linear-gradient(#0000BF,#0000FF);
+}
+.climoP:after
+{
+    content:'';
+    position:absolute;
+    top:-10px; bottom:-10px; 
+    left:-10px; right:-10px; 
+}
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+input[type=radio] {
+    display:none; 
+    margin:10px;
+}
+ 
+input[type=radio] + label {
+    font: bold 10px helvetica;
+    text-decoration: none;
+    position: relative;
+    padding: 10px 1px;
+    border: 1px solid #0066CC;
+    border-bottom-color:#0066CC;
+    color: #FFFFFF;
+    background: linear-gradient(#0000BF,#00003F);
+    border-radius: 10px 10px 10px 10px;
+    outline:none;
+    text-align:center;
+    width:30%;
+    display:inline-block;
+}
+/*
+ Change background color for label next to checked radio button
+ to make it look like highlighted button
+*/
+input[type=radio]:checked + label { 
+    background: linear-gradient(#009F00,#00003F);
+}
+
+#tabs,#tabs2,#tabs3,#tabs4,#tabs5 {
+	/*width: 500px;*/
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a {
+	display: block;
+	padding: 17px 30px;
+	background: #544f6b;
+	text-decoration: none;
+	color: #8478B3;
+}
+
+#tabs li a:hover,#tabs2 li a:hover,#tabs3 li a:hover,#tabs4 li a:hover,#tabs5 li a:hover {
+	background: rgb(78, 74, 99);
+}
+
+
+
+
+/* Tab Content - menucool.com */
+
+ul.tabs
+{
+    padding: 7px 0;
+    font-size: 0;
+    margin:0;
+    list-style-type: none;
+    text-align: center; /*set to left, center, or right to align the tabs as desired*/
+}
+        
+ul.tabs li
+{
+    display: inline;
+    margin: 0;
+    margin-right:3px; /*distance between tabs*/
+}
+        
+ul.tabs li a
+{
+	font: bold 12px helvetica;
+    text-decoration: none;
+    position: relative;
+    padding: 7px 16px;
+    border-bottom-color:#0066CC;
+    color: #000000;
+    background: rgba(255,255,255,0.4);
+    border-radius: 10px 10px 0 0;
+    outline:none;
+}
+        
+ul.tabs li a:visited
+{
+    color: #000;
+}
+        
+ul.tabs li a:hover
+{
+	 background:linear-gradient(rgba(255,255,255,0.6),#AAFF00);
+}        
+        
+ul.tabs li.selected a, ul.tabs li.selected a:hover
+{
+    position: relative;
+    top: 0px;
+    background: linear-gradient(#AAAAAF,#00FF00);
+    border-bottom-color:#CC9900;
+}
+        
+        
+ul.tabs li.selected a:hover
+{
+    text-decoration: none;
+}
+     
+
+div.tabcontents
+{
+    border: 1px solid #000000; padding: 30px;
+    background-color:rgba(255,255,255,0.5);
+    border-top: 0px solid #002400;
+    border-right: 0px solid #002400;
+    border-bottom: 0px solid #002400;
+    border-left: 0px solid #002400;
+    text-align:center;
+    float:left;
+}

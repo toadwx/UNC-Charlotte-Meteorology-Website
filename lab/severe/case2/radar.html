@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="PRAGMA" content="NO-CACHE">
+		<title>Case 1</title>
+		<link rel="shortcut icon" href="http://weather.uncc.edu/src/g4027.ico">
+		<link href="radar.css" rel="stylesheet" type="text/css" />
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-54843224-1', 'auto');
+                  ga('require', 'displayfeatures');
+		  ga('send', 'pageview');
+
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+		<script type="text/javascript">// <![CDATA[
+			$(document).ready(function() {
+			$.ajaxSetup({ cache: false }); // This part addresses an IE bug. without it, IE will only load the first number and will never refresh
+			setInterval(function() {
+			$('#frame').load('weather.uncc.edu');
+			}, 60000); // the "3000" here refers to the time to refresh the div. it is in milliseconds.
+			});
+		// ]]></script>
+		<!-- LOADD MEE -->
+		<script>
+		$(window).load(function() {
+		    $('#load_screen').fadeOut('slow');
+		});
+		</script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-54843224-1', 'auto');
+			ga('require', 'displayfeatures');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	
+	<DIV class=loop>
+		<FONT color="black"><b>Controls</b></FONT>
+	   <table>
+		<tr>
+			<td><A HREF="JavaScript: func()" onClick="change_mode(1);rev()"><IMG BORDER=0 HSPACE=0 VSPACE=0 WIDTH=25 HEIGHT=25 SRC="http://weather.uncc.edu/radar/src/button_rev.gif" ALT="Rev"></A>
+			<A HREF="JavaScript: func()" onClick="stop()"><IMG BORDER=0 HSPACE=0 VSPACE=0 WIDTH=25 HEIGHT=25 SRC="http://weather.uncc.edu/radar/src/button_stop.gif" ALT="Stop"></A>
+			<A HREF="JavaScript: func()" onClick="change_mode(1);fwd()"><IMG BORDER=0 HSPACE=0 VSPACE=0 WIDTH=25 HEIGHT=25 SRC="http://weather.uncc.edu/radar/src/button_fwd.gif" ALT="Fwd"></A>
+			<A HREF="JavaScript: func()" onClick="change_speed(delay_step)"><IMG BORDER=0  HSPACE=0 VSPACE=0 WIDTH=25 HEIGHT=25 SRC="http://weather.uncc.edu/radar/src/button_slow.gif" ALT="slow"></A>
+			<A HREF="JavaScript: func()" onClick="change_speed(-delay_step)"><IMG BORDER=0 HSPACE=0 VSPACE=0 WIDTH=25 HEIGHT=25 SRC="http://weather.uncc.edu/radar/src/button_fast.gif" ALT="fast"></A></td>
+		</tr>
+		<tr>
+			<FORM METHOD="POST" NAME="control_form"> <FONT size=-1 color="black">Frame #:</FONT>
+				<INPUT TYPE="text" Style="border: 1px dotted;border-color:#008B00;background-color: rgba(255,255,255,0.60);color:#000000;" NAME="frame_nr" VALUE=9 SIZE="2" onFocus="this.select()" onChange="go2image(this.value)"></INPUT><BR>
+			</FORM>
+		</tr>		      
+		</table>
+	</DIV>
+	
+	<DIV class=slider>
+	<FONT color="black">Frame Mouse-over Controls</FONT>
+		<TABLE BORDER=1 CELLSPACING=0 CELLPADDING=0>
+			<TR>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc0',0) onMouseout=img_inact('toc0')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc0'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc1',1) onMouseout=img_inact('toc1')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc1'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc2',2) onMouseout=img_inact('toc2')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc2'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc3',3) onMouseout=img_inact('toc3')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc3'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc4',4) onMouseout=img_inact('toc4')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc4'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc5',5) onMouseout=img_inact('toc5')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc5'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc6',6) onMouseout=img_inact('toc6')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc6'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc7',7) onMouseout=img_inact('toc7')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc7'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc8',8) onMouseout=img_inact('toc8')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc8'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc9',9) onMouseout=img_inact('toc9')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc9'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc10',10) onMouseout=img_inact('toc10')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc10'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc11',11) onMouseout=img_inact('toc11')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc11'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc12',12) onMouseout=img_inact('toc12')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc12'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc13',13) onMouseout=img_inact('toc13')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc13'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc14',14) onMouseout=img_inact('toc14')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc14'></a></TD>	
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc15',15) onMouseout=img_inact('toc15')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc15'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc16',16) onMouseout=img_inact('toc16')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc16'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc17',17) onMouseout=img_inact('toc17')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc17'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc18',18) onMouseout=img_inact('toc18')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc18'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc19',19) onMouseout=img_inact('toc19')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc19'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc20',20) onMouseout=img_inact('toc20')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc20'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc21',21) onMouseout=img_inact('toc21')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc21'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc22',22) onMouseout=img_inact('toc22')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc22'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc23',23) onMouseout=img_inact('toc23')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc23'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc24',24) onMouseout=img_inact('toc24')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc24'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc25',25) onMouseout=img_inact('toc25')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc25'></a></TD>
+				<TD><a href=JavaScript:func() onMouseover=img_act('toc26',26) onMouseout=img_inact('toc26')><img src= 'http://weather.uncc.edu/radar/src/off.slider.gif' width=10 height=24 border=0 name='toc26'></a></TD>	
+			</TR>
+		</TABLE>
+	</DIV>
+	<script type="text/javascript" src="animate.js"></script>
+	<script type="text/javascript" src="slider.js"></script>
+	<body onLoad="launch()">
+		<div id="load_screen">
+			<div id="loading" style="text-align:center;margin-left:auto;margin-right:auto;">
+				<img src="../../../src/20.gif" id="loader"><br><br><i>Connecting...</i>
+			</div>
+		</div>
+		<noscript>
+		 JavaScript must be enabled to use this site.
+		 Here are <a href="http://www.enable-javascript.com/" target="_blank">
+		 instructions on how to enable JavaScript in your web browser</a>.
+		</noscript>
+		
+		<div id="backgroundImg" style="position:absolute; z-index:-10;">
+			<img src="../../../res/unccwxslide.png" align="middle" width="100%" height="100%">
+		</div>
+		
+		
+		<div id="masthead">
+			<h1>University of North Carolina at Charlotte</h1>
+			<h2>Severe Weather Exercise</h2>
+		</div>
+		<div id="schoolLogo">
+			<p align="right">
+				<a href="http://www.uncc.edu/"><img id = "school" src="http://weather.uncc.edu/src/UNCC_Crown_Logo_1c.png"  width="80%" height="80%"/></a>
+			</p>
+		</div>
+		<div class="climo" id="continue"><a href="../index.html">Finish</a></div>
+		<div class="climo" id="back"><a href="index.html">Back</a></div><br><br><br><br><br>
+		<div id="picker">
+			<h3 style="margin-top:0;margin-bottom:0;text-align:center;color:#000000;">Product Selector</h3>		
+				<script type="text/javascript" src="comboSiteSwap.js"></script><br>
+				<div class="climoP" onClick="changeProductTR0();">Reflectity Tilt 1</div>
+				<div class="climoP" onClick="changeProductTV0();">Velocity Tilt 1</div> <br><br>
+				<div class="climoP" onClick="changeProductTR1();">Reflectity Tilt 2</div>
+				<div class="climoP" onClick="changeProductTV1();">Velocity Tilt 2</div>
+				<script type="text/javascript" src="comboSiteSwap.js"></script>
+				<script type="text/javascript" src="animate.js"></script>
+				<script type="text/javascript" src="slider.js"></script>
+		</div>
+		<DIV id="frame" class=img>          
+			<IMG name="animation" height="800px" border=0 src="img/TR0_20.gif">
+		</DIV>
+	</body>
+</html>

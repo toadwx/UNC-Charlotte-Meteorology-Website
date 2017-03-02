@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+	<title>EM Support Page</title>
+	<meta name="description" content="UNCC Meteorology EM Support">
+	<meta name="author" content="Warren Pettee">
+	
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div id="ControlPanel">
+		<img id="logo" style="display:block;margin-left:auto;margin-right:auto;margin-top:10px" src="http://weather.uncc.edu/src/LogoIdea.png"  width="75%"/>
+		<h4>Emergency Management Support Resources</h4>
+		<button class="blueButton" onclick="matrixButton()">24hr Hazard Matrix</button>
+		<button class="blueButton">Short Term Forecast</button>
+		<button class="blueButton">Long Term Outlook</button>
+		<button class="blueButton">Local Lightning Data</button>
+		<button class="blueButton">Current Conditions</button>
+		<button class="blueButton" onclick="mosaicButton()">NCDOT Cameras</button>
+		<button class="blueButton">Flood/Precip Data</button>
+		<button class="blueButton" onclick="gisButton()">GIS Panel</button>
+		<button class="blueButton">Contact Us...</button>
+	</div>
+	<div id="Content"> </div>
+	<script src="constructor.js"></script>
+</body>
+</html>

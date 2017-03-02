@@ -1,0 +1,29 @@
+<feed
+xmlns = 'http://www.w3.org/2005/Atom'
+xmlns:cap = 'urn:oasis:names:tc:emergency:cap_1.1'
+xmlns:ha = 'http://www.alerting.net/namespace/index_1.0'
+>
+
+<!-- TZN = <> -->
+<!-- TZO = <> -->
+<!-- http-date = Thu, 03 Mar 2017 18:50:31 GMT -->
+<id>https://alerts.weather.gov/cap/wwaatmget.php?x=NCZ071&amp;y=0</id>
+<generator>NWS CAP Server</generator>
+<updated>2017-03-02T18:50:31+00:00</updated>
+<author>
+<name>w-nws.webmaster@noaa.gov</name>
+</author>
+<title>Current Watches, Warnings and Advisories for Mecklenburg (NCZ071) North Carolina Issued by the National Weather Service</title>
+<link href='https://alerts.weather.gov/cap/wwaatmget.php?x=NCZ071&amp;y=0'/>
+
+  	<entry>
+  	<id>https://alerts.weather.gov/cap/wwaatmget.php?x=NCZ071&amp;y=0</id>
+  	<updated>2017-03-02T18:50:31+00:00</updated>
+  	<author>
+  	<name>w-nws.webmaster@noaa.gov</name>
+  	</author>
+  	<title>There are no active watches, warnings or advisories</title>
+  	<link href='https://alerts.weather.gov/cap/wwaatmget.php?x=NCZ071&amp;y=0'/>
+  	</entry>
+  	</feed>
+  	

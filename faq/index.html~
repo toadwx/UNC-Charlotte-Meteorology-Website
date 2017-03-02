@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<!--
+UNCC Radar Site Selector
+Developed By: Warren Pettee (wpettee.at.uncc.edu (@wpettee(Twitter))
+This page is intended to help users more easily select radar images for our
+region that have been previously generated and transferred to the webserver
+
+TDWR availability is particularly poor without paying an arm and a leg, which for
+our region is unacceptable. Charlotte TDWR is practically the ONLY full coverage
+site for the area. Thus, the objective is to increase availability to better student 
+training, and ultimately public safety in the area through product dissemination 
+free of charge. --
+-->
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title>FAQ</title>
+		<link rel="shortcut icon" href="http://weather.uncc.edu/radar/g4027.ico">
+		<link href="faq.css" rel="stylesheet" type="text/css" />
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-54843224-1', 'auto');
+                  ga('require', 'displayfeatures');
+		  ga('send', 'pageview');
+
+		</script>
+		<script>
+			function startTime() {
+				var today=new Date();
+				var h=today.getHours();
+				var m=today.getMinutes();
+				var s=today.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById('txt').innerHTML = h+":"+m+":"+s+" UTC";
+				var t = setTimeout(function(){startTime()},500);
+			}
+
+			function checkTime(i) {
+				if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+				return i;
+			}
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+		<script type="text/javascript">// <![CDATA[
+			$(document).ready(function() {
+			$.ajaxSetup({ cache: false }); // This part addresses an IE bug. without it, IE will only load the first number and will never refresh
+			setInterval(function() {
+			$('#frame').load('weather.uncc.edu');
+			}, 60000); // the "3000" here refers to the time to refresh the div. it is in milliseconds.
+			});
+		// ]]></script>
+		
+	</head>
+	
+	<body onLoad="">
+		<div id="header">
+			<br>
+			<h1 style="margin-top:0px; margin-bottom:10px;text-align:center;color:#ffffff;">Frequently Asked Questions</h1>
+			<br>
+		</div>
+		<div id="siteLogo">
+			<p align="right">
+			<a href="http://weather.uncc.edu/"><img id = "logoImg" src="http://weather.uncc.edu/radar/radarlogotri.png"  width="8%" height="8%"/></a>
+			</p>
+		</div>
+		<div id="skoolLogo">
+			<p align="right">
+			<a href="http://www.uncc.edu/"><img id = "logoImg2" src="http://weather.uncc.edu/radar/UNCC_Crown_Logo_1c.png"  width="80%" height="80%"/></a>
+			</p>
+		</div>
+		<ul id="tabs">
+		<li id="tab1"><a href="http://weather.uncc.edu/"> <img src="http://weather.uncc.edu/radar/button_station.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_station_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_station.png'" height="10%" width="10%"> </a></li>
+		<li id="tab2"><a href="http://weather.uncc.edu/obs/"><img src="http://weather.uncc.edu/radar/button_obs.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_obs_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_obs.png'" height="10%" width="10%"></a></li>
+		<li id="tab3"><a href="http://weather.uncc.edu/radar/"><img src="http://weather.uncc.edu/radar/button_radar.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_radar_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_radar.png'" height="10%" width="10%"></a></li>
+		<li id="tab4"><a href="http://weather.uncc.edu/models"><img src="http://weather.uncc.edu/radar/button_models.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_models_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_models.png'" height="10%" width="10%"></a></li>
+		<li id="tab5"><a href="http://weather.uncc.edu/climate"><img src="http://weather.uncc.edu/radar/button_climate.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_climate_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_climate.png'" height="10%" width="10%"></a></li>
+		<li id="tab6"><a href="http://weather.uncc.edu/res"><img src="http://weather.uncc.edu/radar/button_resources.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_resources_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_resources.png'" height="10%" width="10%"></a></li>
+		<li id="tab7"><a href="http://weather.uncc.edu/faq"><img src="http://weather.uncc.edu/radar/button_contact_push.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_contact_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_contact_push.png'" height="10%" width="10%"></a></li>
+		</ul>
+	<div id="backImg">
+		<img src="cropped-mcenirywx-027.jpg" align="middle" width="100%" >
+	</div>
+	<div id="txt">
+	<p><img src="mcenirywx-029.jpg" alt="Installing the Weather Station" style="width:30%;float:left;margin-right:10px"><strong>Where is the weather station?</strong><br /><br>
+		On top of the McEniry building near Prospector.</p>
+	
+	<p align="justify"><strong>What is the weather station?</strong><br /><br>
+The station on the roof of McEniry is a Davis Vantage Pro II.  The instruments measure air temperature, dewpoint temperature, air pressure, rain, wind speed and direction, and sunlight.  From these measurements, other weather-related parameters are derived, including heat index, wind chill, rain rate, relative humidity, and climatology-related parameters like temperature and rain amounts for days, months, and years.  </p>
+	<p align="justify"><strong>Who should I contact about weather station questions?</strong><br /><br>
+Faculty contacts are Dr Brian Magi (<a href="http://brianmagi.uncc.edu/" target="_blank">web</a>, <a href="https://twitter.com/brianmagi" target="_blank">twitter</a>) and Dr Matt Eastin (<a href="http://clas-pages.uncc.edu/matt-eastin/" target="_blank">web</a>).  Student contact is Warren Pettee (<a href="https://twitter.com/wpettee" target="_blank">twitter</a>, <a href="http://clas-pages.uncc.edu/mesas/people/warren-pettee/" target="_blank">web</a>)</p>
+	<p align="justify"><strong>Who should I contact about weather questions?</strong><br /><br>
+Lots of people! Faculty contacts are Brian Magi (<a href="http://brianmagi.uncc.edu/" target="_blank">web</a>, <a href="https://twitter.com/brianmagi" target="_blank">twitter</a>), Matt Eastin (<a href="http://clas-pages.uncc.edu/matt-eastin/" target="_blank">web</a>), and <a href="http://clas-pages.uncc.edu/terryshirley/" target="_blank">Terry Shirley</a>.  <a href="http://www.wcnc.com/on-tv/bios/69489652.html" target="_blank">John Wendel</a> (from CNBC) also teaches our Broadcasting Meteorology course and is often on campus during those semesters.  In addition to faculty, the Meteorology program has about 60 Meteorology majors working on their degrees that can help too.  UNC Charlotte weather is tweeted at by <a href="https://twitter.com/wxrjm" target="_blank">Ricky Matthews</a> and <a href="https://twitter.com/firefightertoad" target="_blank">Matt Toadvine</a> (both are UNC Charlotte students). Many of our students are on twitter and facebook, and they all love answering weather questions.</p>
+	<p align="justify"><strong>Who should I contact about global warming, climate, climate change, or climatology (weather averages) questions?</strong><br /><br>
+Dr Brian Magi, Dr Matt Eastin, and Mr Terry Shirley are the best people to talk to about climate or climatology related questions.  Brian Magi&#8217;s <a href="http://clas-pages.uncc.edu/mesas/research/" target="_blank">research</a> and teaching are both related to <a href="http://clas-pages.uncc.edu/mesas/teaching/global-environmental-change/" target="_blank">global warming and global environmental change</a>.  <a href="http://clas-pages.uncc.edu/matt-eastin/research/" target="_blank">Matt Eastin&#8217;s research</a> is ranges from improving our understanding of tropical cyclones to dengue fever to urban heat islands.  Every atmospheric scientist studies the Earth in a way that has to consider global warming and change, and all of us talk about how global warming affects the topics we talk about in the classroom.  Terry Shirley teaches about the <a href="http://clas-pages.uncc.edu/terryshirley/classes/" target="_blank">Earth system and weather and climate</a>.  We are all very comfortable talking about the science related to our changing climate, or talking about weather averages in the venue of climatology.  </p>
+	<p align="center"><strong>Contact Information</strong><br><br>
+		Dr. Brian Magi<br><font size="2">
+		<i>Website Supervisor</i><br> 
+		McEniry 232<br>
+		Email: brian dot magi at uncc dot edu<br>
+		Phone: 704-687-5917</font><br><a class="twitter-follow-button"
+		  href="https://twitter.com/brianmagi"
+		  data-show-count="false"
+		  data-lang="en">
+		Follow
+		</a><br><br>
+		Warren Pettee<br><font size="2">
+		<i>Student Developer and Content Creator</i><br>
+		Email: wpettee at uncc dot edu</font><br><a class="twitter-follow-button"
+		  href="https://twitter.com/wpettee"
+		  data-show-count="false"
+		  data-lang="en">Follow</a><br><br>
+		Dr. Matthew Eastin<br><font size="2">
+		<i>Graduate Coordinator</i><br>
+		McEniry 209<br>
+		Email: mdeastin at uncc dot edu<br>
+		Phone: 704-687-5966</font><br><br>
+		Terry Shirley<br><font size="2">
+		<i>Undergraduate Coordinator</i><br> 
+		McEniry 232<br>
+		Email: trshirle at uncc dot edu<br>
+		Phone: 704-687-5966</font><br><a class="twitter-follow-button"
+		  href="https://twitter.com/wx_terry"
+		  data-show-count="false"
+		  data-lang="en">
+		Follow
+		</a><br><br>
+		
+		Department of Geography and Earth Sciences<br>
+		University of North Carolina at Charlotte<br>
+		Charlotte, NC 28223-0001<br>
+		
+		
+		<script type="text/javascript">
+		window.twttr = (function (d, s, id) {
+		  var t, js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src= "https://platform.twitter.com/widgets.js";
+		  fjs.parentNode.insertBefore(js, fjs);
+		  return window.twttr || (t = { _e: [], ready: function (f) { t._e.push(f) } });
+		}(document, "script", "twitter-wjs"));
+		</script>
+	</p>
+						
+<ul></ul>	<br/><br/>			
+						
+		</div><!-- .entry-content -->
+	</body>
+</html>

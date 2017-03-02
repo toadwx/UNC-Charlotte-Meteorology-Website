@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<!--
+UNCC Radar Site Selector
+Developed By: Warren Pettee (wpettee.at.uncc.edu (@wpettee(Twitter))
+This page is intended to help users more easily select radar images for our
+region that have been previously generated and transferred to the webserver
+
+TDWR availability is particularly poor without paying an arm and a leg, which for
+our region is unacceptable. Charlotte TDWR is practically the ONLY full coverage
+site for the area. Thus, the objective is to increase availability to better student 
+training, and ultimately public safety in the area through product dissemination 
+free of charge. --
+-->
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title>Resources</title>
+		<link rel="shortcut icon" href="http://weather.uncc.edu/radar/g4027.ico">
+		<link href="resources.css" rel="stylesheet" type="text/css" />
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-54843224-1', 'auto');
+                  ga('require', 'displayfeatures');
+		  ga('send', 'pageview');
+
+		</script>
+		<script>
+			function startTime() {
+				var today=new Date();
+				var h=today.getHours();
+				var m=today.getMinutes();
+				var s=today.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById('txt').innerHTML = h+":"+m+":"+s+" UTC";
+				var t = setTimeout(function(){startTime()},500);
+			}
+
+			function checkTime(i) {
+				if (i<10) {i = "0" + i};  // add zero in front of numbers < 10
+				return i;
+			}
+		</script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+		<script type="text/javascript">// <![CDATA[
+			$(document).ready(function() {
+			$.ajaxSetup({ cache: false }); // This part addresses an IE bug. without it, IE will only load the first number and will never refresh
+			setInterval(function() {
+			$('#frame').load('weather.uncc.edu');
+			}, 60000); // the "3000" here refers to the time to refresh the div. it is in milliseconds.
+			});
+		// ]]></script>
+		
+	</head>
+	
+	<body onLoad="">
+		<div id="header">
+			<br>
+			<h1 style="margin-top:0px; margin-bottom:10px;text-align:center;color:#ffffff;">Resources</h1>
+			<br>
+		</div>
+		<div id="siteLogo">
+			<p align="right">
+			<a href="http://weather.uncc.edu/"><img id = "logoImg" src="http://weather.uncc.edu/radar/radarlogotri.png"  width="8%" height="8%"/></a>
+			</p>
+		</div>
+		<div id="skoolLogo">
+			<p align="right">
+			<a href="http://www.uncc.edu/"><img id = "logoImg2" src="http://weather.uncc.edu/radar/UNCC_Crown_Logo_1c.png"  width="80%" height="80%"/></a>
+			</p>
+		</div>
+		
+		<div id="backImg">
+		<ul id="tabs">
+		<li id="tab1"><a href="http://weather.uncc.edu/"> <img src="http://weather.uncc.edu/radar/button_station.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_station_hover.png" onmouseout="this.src='http://weather.uncc.edu/radar/button_station.png'" height="10%" width="10%"> </a></li>
+		<li id="tab2"><a href="http://weather.uncc.edu/obs/"><img src="http://weather.uncc.edu/radar/button_obs.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_obs_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_obs.png'" height="10%" width="10%"></a></li>
+		<li id="tab3"><a href="http://weather.uncc.edu/radar/"><img src="http://weather.uncc.edu/radar/button_radar.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_radar_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_radar.png'" height="10%" width="10%"></a></li>
+		<li id="tab4"><a href="http://weather.uncc.edu/models"><img src="http://weather.uncc.edu/radar/button_models.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_models_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_models.png'" height="10%" width="10%"></a></li>
+		<li id="tab5"><a href="http://weather.uncc.edu/climate"><img src="http://weather.uncc.edu/radar/button_climate.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_climate_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_climate.png'" height="10%" width="10%"></a></li>
+		<li id="tab6"><a href="http://weather.uncc.edu/res"><img src="http://weather.uncc.edu/radar/button_resources_push.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_resources_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_resources_push.png'" height="10%" width="10%"></a></li>
+		<li id="tab7"><a href="http://weather.uncc.edu/faq"><img src="http://weather.uncc.edu/radar/button_contact.png" onmouseover="this.src='http://weather.uncc.edu/radar/button_contact_hover.png'" onmouseout="this.src='http://weather.uncc.edu/radar/button_contact.png'" height="10%" width="10%"></a></li>
+		</ul>
+		<img src="unccwxslide.png" align="middle" width="100%" >
+			<div id="selectorPanel">
+			<br><br>Listed below are several forecasting tools that can be used in generating a forecast. Please let us know if there is another resource that can be added to this page.<br><br>
+
+<strong>Campus Based Forecast Tools:</strong>
+<ul>
+	<li><a href="http://weather.uncc.edu/" target="_blank">Campus Observations</a></li>
+	<li><a href="http://weather.uncc.edu/radar/index.html">Radar Room</a></li>
+	<li><a href="http://weather.uncc.edu/WRF_ARW" target="_blank">WRF-ARW</a></li>
+</ul>
+<strong>Off-Campus Forecast Tools:</strong>
+<ul>
+	<li style="text-align: left">Current Surface Observations (<a title="UCAR Surface Observations" href="http://weather.rap.ucar.edu/surface/" target="_blank">UCAR</a>)</li>
+	<li>Numerical Models (<a title="PSU E-Wall" href="http://mp1.met.psu.edu/~fxg1/ewall.html" target="_blank">ewall</a>,<a title="Twisterdata" href="http://www.twisterdata.com/" target="_blank"> twisterdata</a>)
+<ul>
+	<li><a title="IA State Meteogram" href="http://www.meteor.iastate.edu/~ckarsten/bufkit/image_loader.phtml?site=kclt&amp;nam=on&amp;nam_mos=on&amp;namm=on&amp;gfs_mos=on&amp;gfs=on&amp;gfsm_mos=on&amp;gfsm=on&amp;nws=on&amp;rap=on&amp;obs=on&amp;nam4km=on&amp;con=on&amp;ratio=11&amp;max_t=on&amp;cobb=on&amp;compaction=on&amp;mean_mt=on&amp;max_mt=on&amp;mean=on" target="_blank">Meteograms</a> (IA State)</li>
+	<li><a title="NCEP HRRR" href="http://rapidrefresh.noaa.gov/HRRRncep/" target="_blank">HRRR</a> (NCEP)</li>
+	<li><a title="NCEP WRF-ARW" href="http://www.nssl.noaa.gov/wrf/" target="_blank">WRF-ARW </a>(NCEP)</li>
+	<li><a title="SREF Plume Viewer" href="http://www.spc.noaa.gov/exper/sref/fplumes/" target="_blank">SREF Ensemble </a>(NCEP)</li>
+</ul>
+</li>
+	<li><a title="Enhanced Data Display" href="http://preview.weather.gov/edd/" target="_blank">Bufkit</a></li>
+	<li>Bufkit Data (<a href="http://www.meteor.iastate.edu/~ckarsten/bufkit/data/index.html/" target="_blank">IA State</a>, <a href="http://www.erh.noaa.gov/rah/bufkit/" target="_blank">NWS Raleigh</a>)</li>
+	<li><a href="http://http://weather.uncc.edu/BUFKIT_NCLIST.txt">Complete NC Bufkit File List</a></li>
+	<li><a title="Enhanced Data Display" href="http://preview.weather.gov/edd/" target="_blank">Enhanced Data Display</a> (NWS)
+<a title="Level-2 Radar" href="http://www.srh.noaa.gov/ridge2/ridgenew2/" target="_blank">Ridge 2 Viewer</a> (NWS, unstable)
+<a title="CIMSS Tropical Cyclones" href="http://tropic.ssec.wisc.edu/" target="_blank">Tropical </a>(U-Wisc)</li>
+	<li><a href="http://nsstc.uah.edu/SATCAST/GOES_EAST.html" target="_blank">GOES Convective Initiation Probability</a> (U-Alabama-Huntsville)</li>
+	<li><a href="http://weather.uwyo.edu/upperair/sounding.html" target="_blank">U-Wyoming Soundings</a></li>
+	<li><a href="http://www.spc.noaa.gov/exper/soundings/" target="_blank">SPC Soundings</a></li>
+</ul>
+<strong>National Weather Service Resources:</strong>
+<ul>
+	<li><a href="http://www.spc.noaa.gov/" target="_blank">Storm Prediction Center</a></li>
+	<li><a href="http://www.nhc.noaa.gov/" target="_blank">National Hurricane Center</a></li>
+	<li>Local Forecast Offices
+<ul>
+	<li><a href="http://www.weather.gov/gsp/" target="_blank">Greenville-Spartanburg, SC</a></li>
+	<li><a href="http://www.weather.gov/rah/" target="_blank">Raleigh, NC</a></li>
+	<li><a href="http://www.weather.gov/rnk/" target="_blank">Blacksburg, VA</a></li>
+	<li><a href="http://www.weather.gov/mhx/" target="_blank">Newport, NC</a></li>
+	<li><a href="http://www.weather.gov/iln/" target="_blank">Wilmington, NC</a></li>
+	<li><a href="http://www.weather.gov/cae/" target="_blank">Columbia, SC</a></li>
+</ul>
+</li>
+</ul>
+&nbsp;
+		</div> 
+		</div>
+		
+	</body>
+</html>
