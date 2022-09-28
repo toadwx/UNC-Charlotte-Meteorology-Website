@@ -1,4 +1,10 @@
 # UNC Charlotte Meteorology Website
-This is the git repo for the UNC Charlotte Meteorology website. Some files have been intentionally edited for security purposes. (i.e. The SQL access information) 
+This is the git repo for the UNC Charlotte Meteorology website. 
 
-The website was put originally put together by me and managed from July 2014 to May 2017. The university normally uses WordPress pages to ease usage by faculty and ensure the brand is being properly presented. Because I needed to make MySQL PHP requests and just wanted all-around flexibility, I was able to get an empty server space with the domain name weather.uncc.edu under the conditions that there would be no support from the university and that the university web standards were followed (i.e. the logo and color at the top). You can find the code used to build that masterpiece here. Of course many thanks to the developers of the numerous packages used in the creation of the website and of course the team at CLAS ITS.
+## Contributing
+The project aims to follow the Google Style Guide for HTML/CSS and JavaScript. Minified versions of JavaScript files should be committed and linked in the project. Unfortunately, we cannot automate this using deployment pipelines.
+
+These three components should be in each PHP page:
+footer.php : Contains the standard "bottom" for the webpage
+header.php : Contains standard material for the head section of HTML
+navbar.php : Contains the standard "top" for the webpage
