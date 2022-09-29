@@ -3,3 +3,128 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* Main upper content area */
+.upper {
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 400px;
+    border: solid;
+}
+
+/* Current Conditions panel */
+.current {
+    flex-grow: 1;
+    margin: 0px 30px 30px 30px;
+}
+
+.current h3 {
+    background-color: white;
+    text-align: center;
+    margin-left: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    padding-top: 0px;
+    position: relative;
+    top: 3px;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    color: black;
+    text-decoration: none;
+}
+
+.current img {
+    height: 300px;
+    width: 300px;
+}
+
+/* Forecast Panel */
+.forecast {
+    flex-grow: 3;
+    margin: 0px 30px 30px 30px;
+}
+
+.forecast h3 {
+    background-color: white;
+    text-align: center;
+    margin-left: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    padding-top: 0px;
+    position: relative;
+    top: 3px;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    color: black;
+    text-decoration: none;
+}
+
+.forecast img {
+    height: 300px;
+    width: 80%;
+}
+
+/* Main lower content area */
+.lower {
+    background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 400px;
+    width: 100%
+    border: solid;
+}
+
+/* STORM panel */
+.storm {
+    flex-grow: 1;
+    background-image: url("https://forecast.weather.gov/newimages/large/sct.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.storm h4 {
+    background-color: white;
+    text-align: left;
+    margin-left: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    padding-top: 0px;
+    position: relative;
+    top: 3px;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    color: black;
+    text-decoration: none;
+}
+
+/* METR Program Panel */
+.met-prog {
+    flex-grow: 1;
+    background-image: url("https://forecast.weather.gov/newimages/large/sct.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.met-prog h4 {
+    background-color: white;
+    text-align: left;
+    margin-left: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    padding-top: 0px;
+    position: relative;
+    top: 3px;
+    font-size: 22px;
+    letter-spacing: 1.5px;
+    color: black;
+    text-decoration: none;
+}
