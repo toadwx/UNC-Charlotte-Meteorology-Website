@@ -6,7 +6,7 @@ body {
 
 /* Main upper content area */
 .upper {
-    background-color: red;
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
