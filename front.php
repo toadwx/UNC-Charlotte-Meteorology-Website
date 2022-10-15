@@ -4,34 +4,38 @@
         <div class="current">
             <h3>Current Conditions</h3>
             
-            <div id="current_img">
-            </div>
-            
-            <div id="stats_header">
-            </div>
+            <table style="width:75%;margin-left:12%;">
+                <tbody>
+                    <tr>
+                        <td style="text-align:center">
+                            <div id="current_img"></div>
+                        </td>
+                        <td style="text-align:center">
+                            <div id="stats_header"></div>
 
-            <div id="datetim">
-            </div>
+                            <div id="datetim"></div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
             
-            <br/>
-            
-            <table style="width:100%">
+            <table style="width:75%;margin-left:12%;">
                 <tbody>
                     <tr>
                         <td>Temperature</td>
-                        <td id="T"></td>
+                        <td id="T" style="text-align:right;"></td>
                     </tr>
                     <tr>
                         <td>Dew Point</td>
-                        <td id="Td"></td>
+                        <td id="Td" style="text-align:right;"></td>
                     </tr>
                     <tr>
                         <td>Pressure</td>
-                        <td id="p"></td>
+                        <td id="p" style="text-align:right;"></td>
                     </tr>
                     <tr>
                         <td>Wind</td>
-                        <td id="w"></td>
+                        <td id="w" style="text-align:right;"></td>
                     </tr>
                 </tbody>
             </table>
@@ -42,22 +46,47 @@
                 <b>Daily Climatology</b>
             </div>
             
-            <table style="width:100%">
+            <table style="width:75%;margin-left:12%;">
                 <tbody>
                     <tr>
                         <td>Temperature Max/Min</td>
-                        <td id="Tmax_min"></td>
+                        <td id="Tmax_min" style="text-align:right;"></td>
                     </tr>
                     <tr>
                         <td>Daily Rainfall</td>
-                        <td id="r"></td>
+                        <td id="r" style="text-align:right;"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="forecast">
-            <h3>Forecast</h3>
-            <img src="https://forecast.weather.gov/newimages/large/sct.png"/>
+            <h3>Five-Day Forecast</h3>
+            
+            <table>
+                <tbody>
+                    <tr>
+                        <td id="day1"></td>
+                        <td id="day2">Day 2</td>
+                        <td id="day3">Day 3</td>
+                        <td id="day4">Day 4</td>
+                        <td id="day5">Day 5</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/clear.png" /></td>
+                        <td><img src="images/cloudy.png" /></td>
+                        <td><img src="images/rain.png" /></td>
+                        <td><img src="images/snow.png" /></td>
+                        <td><img src="images/tstorm.png" /></td>
+                    </tr>
+                    <tr>
+                        <td><p>High: XX&#176;F</p><p>Low: XX&#176;F</p></td>
+                        <td><p>High: XX&#176;F</p><p>Low: XX&#176;F</p></td>
+                        <td><p>High: XX&#176;F</p><p>Low: XX&#176;F</p></td>
+                        <td><p>High: XX&#176;F</p><p>Low: XX&#176;F</p></td>
+                        <td><p>High: XX&#176;F</p><p>Low: XX&#176;F</p></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     
