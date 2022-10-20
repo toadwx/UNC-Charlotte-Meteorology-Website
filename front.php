@@ -4,7 +4,7 @@
         <div class="current">
             <h3>Current Conditions</h3>
             
-            <table style="width:75%;margin-left:12%;">
+            <table style="width:90%;margin-left:5%;">
                 <tbody>
                     <tr>
                         <td style="text-align:center">
@@ -37,17 +37,12 @@
                         <td>Wind</td>
                         <td id="w" style="text-align:right;"></td>
                     </tr>
-                </tbody>
-            </table>
-            
-            <br/>
-            
-            <div>
-                <b>Daily Climatology</b>
-            </div>
-            
-            <table style="width:75%;margin-left:12%;">
-                <tbody>
+                    <tr>
+                        <td><br/></td>
+                    </tr>
+                    <tr>
+                        <td><b>Daily Climatology</b></td>
+                    </tr>
                     <tr>
                         <td>Temperature Max/Min</td>
                         <td id="Tmax_min" style="text-align:right;"></td>
@@ -66,10 +61,10 @@
                 <tbody>
                     <tr>
                         <td id="day1"></td>
-                        <td id="day2">Day 2</td>
-                        <td id="day3">Day 3</td>
-                        <td id="day4">Day 4</td>
-                        <td id="day5">Day 5</td>
+                        <td id="day2"></td>
+                        <td id="day3"></td>
+                        <td id="day4"></td>
+                        <td id="day5"></td>
                     </tr>
                     <tr>
                         <td><img src="images/clear.png" /></td>
@@ -79,11 +74,14 @@
                         <td><img src="images/tstorm.png" /></td>
                     </tr>
                     <tr>
-                        <td><p>High: XX&#176;F</p><p>Low: XX&#176;F</p></td>
-                        <td><p>High: XX&#176;F</p><p>Low: XX&#176;F</p></td>
-                        <td><p>High: XX&#176;F</p><p>Low: XX&#176;F</p></td>
-                        <td><p>High: XX&#176;F</p><p>Low: XX&#176;F</p></td>
-                        <td><p>High: XX&#176;F</p><p>Low: XX&#176;F</p></td>
+                        <td><br/></td>
+                    </tr>
+                    <tr>
+                        <td><p>High: XX&#176;F<br/>Low: XX&#176;F</p></td>
+                        <td><p>High: XX&#176;F<br/>Low: XX&#176;F</p></td>
+                        <td><p>High: XX&#176;F<br/>Low: XX&#176;F</p></td>
+                        <td><p>High: XX&#176;F<br/>Low: XX&#176;F</p></td>
+                        <td><p>High: XX&#176;F<br/>Low: XX&#176;F</p></td>
                     </tr>
                 </tbody>
             </table>

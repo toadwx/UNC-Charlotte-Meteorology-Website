@@ -4,6 +4,12 @@ body {
     padding: 0;
 }
 
+table {
+    font-family: 'Open Sans',Arial,sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
 /* Main upper content area */
 .upper {
     background-color: white;
