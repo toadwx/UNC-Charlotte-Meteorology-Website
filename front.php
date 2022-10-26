@@ -55,33 +55,45 @@
             </table>
         </div>
         <div class="forecast">
-            <h3>Five-Day Forecast</h3>
+            <h3>Short-Term Forecast</h3>
             
             <table>
                 <tbody>
                     <tr>
+                        <td id="day0"></td>
                         <td id="day1"></td>
                         <td id="day2"></td>
                         <td id="day3"></td>
                         <td id="day4"></td>
                         <td id="day5"></td>
+                        <td id="day6"></td>
+                        <td id="day7"></td>
+                        <td id="day8"></td>
                     </tr>
                     <tr>
-                        <td><img src="images/clear.png" /></td>
-                        <td><img src="images/cloudy.png" /></td>
-                        <td><img src="images/rain.png" /></td>
-                        <td><img src="images/snow.png" /></td>
-                        <td><img src="images/tstorm.png" /></td>
+                        <td id="day0_img"></td>
+                        <td id="day1_img"></td>
+                        <td id="day2_img"></td>
+                        <td id="day3_img"></td>
+                        <td id="day4_img"></td>
+                        <td id="day5_img"></td>
+                        <td id="day6_img"></td>
+                        <td id="day7_img"></td>
+                        <td id="day8_img"></td>
                     </tr>
                     <tr>
                         <td><br/></td>
                     </tr>
                     <tr>
-                        <td><p>High: XX&#176;F<br/>Low: XX&#176;F</p></td>
-                        <td><p>High: XX&#176;F<br/>Low: XX&#176;F</p></td>
-                        <td><p>High: XX&#176;F<br/>Low: XX&#176;F</p></td>
-                        <td><p>High: XX&#176;F<br/>Low: XX&#176;F</p></td>
-                        <td><p>High: XX&#176;F<br/>Low: XX&#176;F</p></td>
+                        <td id="day0_temp"></td>
+                        <td id="day1_temp"></td>
+                        <td id="day2_temp"></td>
+                        <td id="day3_temp"></td>
+                        <td id="day4_temp"></td>
+                        <td id="day5_temp"></td>
+                        <td id="day6_temp"></td>
+                        <td id="day7_temp"></td>
+                        <td id="day8_temp"></td>
                     </tr>
                 </tbody>
             </table>
@@ -93,7 +105,9 @@
             <h4>STORM</h4>
         </div>
         <div class="met-prog">
+            <a href="https://geoearth.charlotte.edu/undergraduate-programs/meteorology">
             <h4>Meteorology at Charlotte</h4>
+            </a>
         </div>
     </div>
 
