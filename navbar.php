@@ -16,8 +16,8 @@
                 </button>
                 <div class="dropdown-content">
                 <a href="#">Current Conditions</a><br>
-                <a href="#">Resources</a><br>
-                <a href="#">Link 3</a><br>
+                <a href="#">Forecasting Resources</a><br>
+                <a href="#">Link 4</a><br>
                 </div>
             </div>
             <div class="dropdown">
@@ -26,7 +26,7 @@
                 </button>
                 <div class="dropdown-content">
                 <a href="#">McEniry Station Archive</a><br>
-                <a href="#">Resources</a><br>
+                <a href="#">Climate Resources</a><br>
                 </div>
             </div>
             <a href="#news">STORM</a>
@@ -35,7 +35,7 @@
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                <a href="#">Meteorology Program</a><br>
+                <a href="https://geoearth.charlotte.edu/undergraduate-programs/meteorology">Meteorology Program</a><br>
                 <a href="#">Chi Epsilon Pi</a><br>
                 <a href="#">Faculty</a><br>
                 </div>
