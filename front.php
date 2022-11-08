@@ -54,6 +54,7 @@
                 </tbody>
             </table>
         </div>
+
         <div class="forecast">
             <h3>Short-Term Forecast</h3>
             
@@ -97,6 +98,8 @@
                     </tr>
                 </tbody>
             </table>
+            <br>
+            <div id="forecasterName" class="forecast-attribution">Forecast by: Ricky Matthews</div>
         </div>
     </div>
     
