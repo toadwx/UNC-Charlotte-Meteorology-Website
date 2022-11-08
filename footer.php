@@ -1,8 +1,3 @@
-<div id="footer">
-    <div id="footer-toggle">
-
-    </div>
-    <div id="footer-accordian">
-        
-    </div>
+<div class="page-footer">
+    THIS IS A FOOTER THIS IS A FOOTER THIS IS A FOOTER THIS IS A FOOTER
 </div>
