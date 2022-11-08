@@ -104,14 +104,21 @@
     </div>
     
     <div class="lower">
-        <div class="storm">
-            <h4>STORM</h4>
-        </div>
-        <div class="met-prog">
-            <a href="https://geoearth.charlotte.edu/undergraduate-programs/meteorology">
-            <h4>Meteorology at Charlotte</h4>
-            </a>
-        </div>
+        <a href="/" class="graphic-link w50">
+            <img src="https://forecast.weather.gov/newimages/large/sct.png" class="graphic-link-image">
+            <div class="graphic-link-overlay">
+                <h2>STORM</h2>
+                Student Organization of Meteorology
+            </div>
+        </a>
+        <a href="/" class="graphic-link w50">
+            <img src="images/metr_group.jpg" class="graphic-link-image">
+            <div class="graphic-link-overlay">
+                <h2>Meteorology at Charlotte</h2>
+                Learn more about the Meteorology Program
+            </div>
+        </a>
+
     </div>
 
 </div>

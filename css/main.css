@@ -86,61 +86,52 @@ table {
     align-items: center;
     text-align: center;
     height: 400px;
-    width: 100%
+    width: 100%;
     border: solid;
 }
 
-/* STORM panel */
-.storm {
-    flex-grow: 1;
-    background-image: url("https://forecast.weather.gov/newimages/large/sct.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-}
-
-.storm h4 {
-    background-color: white;
-    text-align: left;
-    margin-left: 30px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    padding-top: 0px;
+/* Generic graphic link designed for a flex container */
+.graphic-link {
     position: relative;
-    top: 3px;
-    font-size: 22px;
-    letter-spacing: 1.5px;
-    color: black;
-    text-decoration: none;
+    flex: 33.33%;
+    background-color:#47547d;
 }
 
-/* METR Program Panel */
-.met-prog {
-    flex-grow: 1;
-    background-image: url("../images/metr_group.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
+.graphic-link-image{
+    height: 500px;
+    opacity: 0.5;
 }
 
-.met-prog h4 {
-    background-color: white;
-    text-align: left;
-    margin-left: 30px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    padding-top: 0px;
-    position: relative;
-    top: 3px;
-    font-size: 22px;
-    letter-spacing: 1.5px;
-    color: black;
-    text-decoration: none;
-}
-
-.met-prog a {
-    display: block;
-    height: 100%;
+.graphic-link-overlay {
+    position: absolute;
     width: 100%;
+    height: 100%;
+    top: 0;
+    color: white;
+    text-align: left;
+    margin: 1em 0 0 1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: white;
     text-decoration: none;
+}
+
+.graphic-link-overlay h2 {
+    text-align: left;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+}
+
+.graphic-link:hover .graphic-link-image {
+    opacity: 0.8;
+}
+
+/* 50% width class for generics */
+.w50 {
+    width: 50%;
 }
