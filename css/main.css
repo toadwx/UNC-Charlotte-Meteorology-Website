@@ -93,7 +93,7 @@ table {
 .graphic-link {
     position: relative;
     flex: 33.33%;
-    background-color:#47547d;
+    background-color: #47547d;
 }
 
 .graphic-link-image{
@@ -132,4 +132,29 @@ table {
 /* 50% width class for generics */
 .w50 {
     width: 50%;
+}
+
+/* Faculty page formatting */
+.faculty h3 {
+    position: relative;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    color: #005035;
+    text-decoration: none;
+}
+
+.img-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    margin: 1.2em 0;
+}
+
+.faculty img {
+    margin: 1.2em;
+    border-radius: 0.7em;
 }
