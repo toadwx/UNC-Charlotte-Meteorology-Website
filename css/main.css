@@ -158,3 +158,58 @@ table {
     margin: 1.2em;
     border-radius: 0.7em;
 }
+
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 89%;
+  width: 89%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #005035;
+  margin: 1.2em;
+  border-radius: 0.7em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.container:hover .overlay {
+  opacity: 0.9;
+}
+
+.name {
+  align-self: center;
+  color: white;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 1.6em;
+  letter-spacing: 1.5px;
+}
+
+.prof-title {
+  color: white;
+  align-self: center;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 350;
+  font-size: 1em;
+  letter-spacing: 1.4px;
+}
+
+.info-btn {
+  align-self: center;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: 1.5px;
+}
