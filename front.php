@@ -105,13 +105,13 @@
     
     <div class="lower">
         <a href="/" class="graphic-link w50">
-            <img src="https://forecast.weather.gov/newimages/large/sct.png" class="graphic-link-image">
+            <img src="images/clt-lightning.jpg" class="graphic-link-image">
             <div class="graphic-link-overlay">
                 <h2>STORM</h2>
                 Student Organization of Meteorology
             </div>
         </a>
-        <a href="/" class="graphic-link w50">
+        <a href="https://geoearth.charlotte.edu/undergraduate-programs/meteorology" class="graphic-link w50">
             <img src="images/metr_group.jpg" class="graphic-link-image">
             <div class="graphic-link-overlay">
                 <h2>Meteorology at Charlotte</h2>

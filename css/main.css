@@ -93,12 +93,12 @@ table {
 .graphic-link {
     position: relative;
     flex: 33.33%;
-    background-color: #47547d;
+    background-color: #005035;
 }
 
 .graphic-link-image{
     height: 500px;
-    opacity: 0.5;
+    opacity: 1.0;
 }
 
 .graphic-link-overlay {
@@ -126,7 +126,7 @@ table {
 }
 
 .graphic-link:hover .graphic-link-image {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 /* 50% width class for generics */
