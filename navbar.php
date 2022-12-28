@@ -15,7 +15,7 @@
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                <a href="#">Current Conditions</a><br>
+                <a href="current.php">Current Conditions</a><br>
                 <a href="#">Forecasting Resources</a><br>
                 <a href="#">Link 4</a><br>
                 </div>
