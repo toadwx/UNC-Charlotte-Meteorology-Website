@@ -80,7 +80,6 @@ function gotData(data)
   document.getElementById("w").innerHTML = wndspd + " mph from " + wnddir + "&#176;";
   document.getElementById("r").innerHTML = rainTot + " in";
   document.getElementById("Tmax_min").innerHTML = maxT + "&#176;F / " + minT + "&#176;F";
-  document.getElementById("current_img").innerHTML = '<img src="images/'+ imgName +'.png" />';
   
   //--------------------------------------------------------------------
   // Update Forecast Content
