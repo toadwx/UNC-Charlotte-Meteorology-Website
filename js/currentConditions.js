@@ -127,7 +127,62 @@ class IemStationChart {
      * Creates the HighChart chart for the StnData in object
      */
     createChart() {
-        console.log(this.stnData)
+        console.log(this.stnData);
+
+        var tempF = [];
+        var dewpF = [];
+        var presMb = [];
+        var prcpIn = [];
+        var windKt = [];
+        var windDir = [];
+        var windGust = [];
+        var timeStamps = [];
+
+        // Loop through each day of data
+        for (var i=0; i < this.stnData.length; i++) {
+            // Loop through each hour of data
+            for (var j=0; j < this.stnData[i].length; j++) {
+                tempF.push(this.stnData[i][j].tmpf);
+                dewpF.push(this.stnData[i][j].dwpf);
+                presMb.push(this.stnData[i][j].mslp);
+                prcpIn.push(this.stnData[i][j].p01i);
+                windKt.push(this.stnData[i][j].sknt);
+                windDir.push(this.stnData[i][j].drct);
+                windGust.push(this.stnData[i][j].gust);
+                timeStamps.push(this.stnData[i][j].local_valid)
+            }
+        }
+
+        // Build Chart
+        this.chartInstance = Highcharts.chart(this.chartDiv, {
+            chart: {
+                type: 'line',
+                height: '40%',
+            },
+            exporting: {
+                sourceHeight: 1080,
+                sourceWidth: 1920,
+            },
+            title: {
+                text: "Current Conditions - JQF",
+            },
+            subtitle: {
+                text: "Start to End Date",
+            },
+            series: [{
+                type: 'line',
+                name: "Temperature (F)",
+                data: tempF,
+                color: "#FF00FF",
+            },
+            ],
+            credits: {
+                enabled: true,
+                text: 'Iowa Environmental Mesonet',
+                href: 'https://mesonet.agron.iastate.edu/',
+            },
+        });
+        this.chartInstance.reflow();      
     }
 
     /**

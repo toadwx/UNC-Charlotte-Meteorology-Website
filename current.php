@@ -1,7 +1,6 @@
 <html>
     <head>
         <?php include("header.php");?>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
     </head>
     <body>
         <?php include("navbar.php");?>
