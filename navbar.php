@@ -37,7 +37,7 @@
                 <div class="dropdown-content">
                 <a href="https://geoearth.charlotte.edu/undergraduate-programs/meteorology">Meteorology Program</a><br>
                 <a href="#">Chi Epsilon Pi</a><br>
-                <a href="#">Faculty</a><br>
+                <a href="faculty.php">Faculty</a><br>
                 </div>
             </div>
         </div>
