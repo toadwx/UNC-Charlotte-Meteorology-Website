@@ -164,7 +164,7 @@ class IemStationChart {
                 sourceWidth: 1920,
             },
             title: {
-                text: "Current Conditions - JQF",
+                text: "Temperature/Dewpoint",
             },
             subtitle: {
                 text: "Start to End Date",
@@ -173,7 +173,13 @@ class IemStationChart {
                 type: 'line',
                 name: "Temperature (F)",
                 data: tempF,
-                color: "#FF00FF",
+                color: "#CB0003",
+            },
+            {
+                type: 'line',
+                name: "Dewpoint (F)",
+                data: dewpF,
+                color: "#008C46",
             },
             ],
             credits: {
