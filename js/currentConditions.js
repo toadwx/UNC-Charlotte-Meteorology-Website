@@ -36,7 +36,7 @@ class IemStationChart {
         this.period = period;
         this.endDate = endDate;
         document.getElementById(chartDiv).innerHTML = this.LOADING_BAR;
-
+        
         const instance = this; // Object reference for inside the deferred then
         /*
         Not pretty, but we basically switch through fixed use cases so we aren't building a 
@@ -46,11 +46,11 @@ class IemStationChart {
         for ACIS calls)
         */
         if (period == "3-day"){
-            var dayOne = endDate;
+            var dayOne = new Date(endDate);
             dayOne.setDate(endDate.getDate() - 2);
-            var dayTwo = endDate;
+            var dayTwo = new Date(endDate);
             dayOne.setDate(endDate.getDate() - 1);
-            var dayThree = endDate;
+            var dayThree = new Date(endDate);
 
             // Handles multiple deferred calls so we dont end up with a nested mess
             $.when(
@@ -69,15 +69,15 @@ class IemStationChart {
             });
         }
         else if(period == "48-hr") {
-            var dayOne = endDate;
+            var dayOne = new Date(endDate);
             dayOne.setDate(endDate.getDate() - 1);
-            var dayTwo = endDate;
-
+            var dayTwo = new Date(endDate);
+            
             // Handles multiple deferred calls so we dont end up with a nested mess
             $.when(
                 instance.getStationData(dateToString(dayOne)),
                 instance.getStationData(dateToString(dayTwo))
-            ).then(function(stnDataOne, stnDataTwo, stnDataThree) {
+            ).then(function(stnDataOne, stnDataTwo) {
                 // Check for errors
                 // Combine JSON data into one package
                 instance.stnData = [stnDataOne[0].data, stnDataTwo[0].data];
@@ -89,7 +89,7 @@ class IemStationChart {
             });
         }
         else if (period == "24-hr") {
-            var dayOne = endDate;
+            var dayOne = new Date(endDate);
 
             // Handles multiple deferred calls so we dont end up with a nested mess
             $.when(
@@ -142,13 +142,16 @@ class IemStationChart {
         for (var i=0; i < this.stnData.length; i++) {
             // Loop through each hour of data
             for (var j=0; j < this.stnData[i].length; j++) {
-                tempF.push(this.stnData[i][j].tmpf);
-                dewpF.push(this.stnData[i][j].dwpf);
-                presMb.push(this.stnData[i][j].mslp);
-                prcpIn.push(this.stnData[i][j].p01i);
-                windKt.push(this.stnData[i][j].sknt);
-                windDir.push(this.stnData[i][j].drct);
-                windGust.push(this.stnData[i][j].gust);
+                var valid_date = new Date(this.stnData[i][j].local_valid);
+                valid_date = valid_date.getTime() - (valid_date.getTimezoneOffset() * 60000);
+                
+                tempF.push([valid_date,this.stnData[i][j].tmpf]);
+                dewpF.push([valid_date,this.stnData[i][j].dwpf]);
+                presMb.push([valid_date,this.stnData[i][j].mslp]);
+                prcpIn.push([valid_date,this.stnData[i][j].p01i]);
+                windKt.push([valid_date,this.stnData[i][j].sknt]);
+                windDir.push([valid_date,this.stnData[i][j].drct]);
+                windGust.push([valid_date,this.stnData[i][j].gust]);
                 timeStamps.push(this.stnData[i][j].local_valid)
             }
         }
@@ -156,7 +159,7 @@ class IemStationChart {
         // Build Chart
         this.chartInstance = Highcharts.chart(this.chartDiv, {
             chart: {
-                type: 'line',
+                type: 'spline',
                 height: '40%',
             },
             exporting: {
@@ -167,16 +170,46 @@ class IemStationChart {
                 text: "Temperature/Dewpoint",
             },
             subtitle: {
-                text: "Start to End Date",
+                text: "Previous " + this.period + " Period",
+            },
+            xAxis: {
+                title: {
+                    text: "Valid Local Time"
+                },
+                type: 'datetime',
+                labels: {
+                    rotation: -35,
+                    formatter: function() {
+                        return Highcharts.dateFormat('%b-%d %H:%M', this.value);
+                    }
+                }
+            },
+            yAxis: {
+                title: {
+                    text: "Degrees F"
+                }
+            },
+            plotOptions: {
+                series : {
+                    lineWidth: 2,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 3,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
             },
             series: [{
-                type: 'line',
                 name: "Temperature (F)",
                 data: tempF,
                 color: "#CB0003",
             },
             {
-                type: 'line',
                 name: "Dewpoint (F)",
                 data: dewpF,
                 color: "#008C46",
