@@ -18,13 +18,14 @@ function loadJSON(path, success, error) {
 loadJSON("https://forecast.weather.gov/MapClick.php?lon=-80.73204&lat=35.30629&FcstType=json", parseFcst,'jsonp');
 
 function parseFcst(Data) {
-  console.log(Data['creationDateLocal']);
+  // console.log(Data['creationDateLocal']);
   
   var days = Data['time']['startPeriodName'].slice(0,6);
   var tempLabels = Data['time']['tempLabel'].slice(0,9);
   var tempVals = Data['data']['temperature'].slice(0,9);
   var icons = Data['data']['iconLink'].slice(0,9);
   var currIcon = 'https://forecast.weather.gov/newimages/medium/' + Data['currentobservation']['Weatherimage'];
+  var currCond = Data['currentobservation']['Weather'];
   
   for (let i = 0; i < days.length; i++) {
     var dayId = "day" + i;
@@ -38,8 +39,9 @@ function parseFcst(Data) {
     document.getElementById(dayId).innerHTML = "<b>" + days[i] + "</b>";
     document.getElementById(dayId+"_img").innerHTML = "<img src=" + icons[i] + " />";
     document.getElementById(dayId+"_temp").innerHTML = "<span style='color:"+labColor+";'><b>" + tempLabels[i] + ": " + tempVals[i] + "&#176;F</b></span>";
-    document.getElementById("current_img").innerHTML = "<img src=" + currIcon + " />";
   }
   
-  console.log(tempVals);
+  document.getElementById("current_img").innerHTML = "<img src=" + currIcon + " />";
+  document.getElementById("current_cond").innerHTML = "<b>" + currCond + "</b>";
+
 }

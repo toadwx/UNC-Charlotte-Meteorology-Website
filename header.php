@@ -1,3 +1,5 @@
+<title>Campus Weather Portal</title>
+<link rel="shortcut icon" href="https://geoearth.charlotte.edu/sites/all/themes/uncc_epsilon/favicon.ico" type="image/vnd.microsoft.icon">
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/navbar.css">
 <link rel="stylesheet" href="css/footer.css">

@@ -10,8 +10,10 @@
                         <td style="text-align:center">
                             <div id="current_img"></div>
                         </td>
-                        <td style="text-align:center">
-                            <div id="stats_header"></div>
+                        <td style="text-align:center;font-size:0.7em;">
+                            <div id="current_cond" style="font-size:1.7em"></div>
+                            
+                            <div><i>Last Updated:</i></div>
 
                             <div id="datetim"></div>
                         </td>
@@ -38,14 +40,12 @@
                         <td id="w" style="text-align:right;"></td>
                     </tr>
                     <tr>
-                        <td><br/></td>
+                        <td>Daily Max Temperature</td>
+                        <td id="Tmax" style="text-align:right;"></td>
                     </tr>
                     <tr>
-                        <td><b>Daily Climatology</b></td>
-                    </tr>
-                    <tr>
-                        <td>Temperature Max/Min</td>
-                        <td id="Tmax_min" style="text-align:right;"></td>
+                        <td>Daily Min Temperature</td>
+                        <td id="Tmin" style="text-align:right;"></td>
                     </tr>
                     <tr>
                         <td>Daily Rainfall</td>

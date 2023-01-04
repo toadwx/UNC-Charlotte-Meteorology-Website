@@ -10,6 +10,7 @@
     </div>
     <div id="navbar-container">
         <div id="navbar">
+        <a href="index.php">Home</a>
         <div class="dropdown">
                 <button class="dropbtn">Weather
                 <i class="fa fa-caret-down"></i>
