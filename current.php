@@ -7,7 +7,20 @@
         
         <div class="app-container">
         <h3>Current Conditions</h3>
-
+        <div>
+            <label class="radio-container">24 hours
+                <input type="radio" checked="checked" name="timescaleRadio">
+                <span class="radio-checkmark"></span>
+            </label>
+            <label class="radio-container">48 hours
+                <input type="radio" name="timescaleRadio">
+                <span class="radio-checkmark"></span>
+            </label>
+            <label class="radio-container">72 hours
+                <input type="radio" name="timescaleRadio">
+                <span class="radio-checkmark"></span>
+            </label>
+        </div>
         <div class="tab">
             <button id="defaultTabButton" class="tablinks active" onclick="openTab(event, 'tempChartCont')">Temperatures</button>
             <button class="tablinks" onclick="openTab(event, 'prcpChartCont')">Precipitation</button>
