@@ -11,14 +11,13 @@
     <div id="navbar-container">
         <div id="navbar">
         <a href="index.php">Home</a>
-        <div class="dropdown">
+            <div class="dropdown">
                 <button class="dropbtn">Weather
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
                 <a href="current.php">Current Conditions</a><br>
-                <a href="#">Forecasting Resources</a><br>
-                <a href="#">Link 4</a><br>
+                <a href="fcst-resources.php">Forecasting Resources</a><br>
                 </div>
             </div>
             <div class="dropdown">
@@ -27,7 +26,7 @@
                 </button>
                 <div class="dropdown-content">
                 <a href="#">McEniry Station Archive</a><br>
-                <a href="#">Climate Resources</a><br>
+                <a href="climate-resources.php">Climate Resources</a><br>
                 </div>
             </div>
             <a href="#news">STORM</a>
