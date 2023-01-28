@@ -1,10 +1,36 @@
 // On-Load
 $(function() {
     // Initialize Default Chart
-    var stationChart = new IemStationChart("tempChartCont", "JQF", "NC_ASOS", new Date(), "48-hr", "temp");
-    var stationChart2 = new IemStationChart("prcpChartCont", "CLT", "NC_ASOS", new Date("2022-07-10"), "48-hr", "prcp");
-    var stationChart4 = new IemStationChart("windChartCont", "JQF", "NC_ASOS", new Date(), "48-hr", "wind");
+    loadGraphs();
+    $('input[name="timescaleRadio"]').on('input', function(e) {
+        loadGraphs();
+    });
 });
+
+function loadGraphs() {
+    var selectedTime = $('input[name="timescaleRadio"]:checked').val();
+    if (selectedTime == "custom")
+    {
+        var timeScale = "24-hr";
+        var today = new Date();
+        var minDate = new Date("1990-01-01");
+        var selectedDate = new Date($('#customDatePick').val());
+
+        if (selectedDate > today || selectedDate < minDate) {
+            alert("Invalid date was selected")
+        }
+
+        var endDate = new Date($('#customDatePick').val());
+    }
+    else {
+        var timeScale = selectedTime;
+        var endDate = new Date();
+    }
+
+    var stationGraph = new IemStationChart("tempChartCont", "JQF", "NC_ASOS", endDate, timeScale, "temp");
+    var stationGraph2 = new IemStationChart("prcpChartCont", "JQF", "NC_ASOS", endDate, timeScale, "prcp");
+    var stationGraph3 = new IemStationChart("windChartCont", "JQF", "NC_ASOS", endDate, timeScale, "wind");
+}
 
 function dateToString(d) {
     let stringMonth = d.getMonth() + 1;
@@ -113,10 +139,10 @@ class IemStationChart {
             // Handles multiple deferred calls so we dont end up with a nested mess
             $.when(
                 instance.getStationData(dateToString(dayOne))
-            ).then(function(stnDataOne, stnDataTwo, stnDataThree) {
+            ).then(function(stnDataOne) {
                 // Check for errors
                 // Combine JSON data into one package
-                instance.stnData = [stnDataOne[0].data];
+                instance.stnData = [stnDataOne.data];
 
                 // Finally dig into the data to make chart
                 instance.createChart();
