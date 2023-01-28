@@ -2,8 +2,7 @@
 $(function() {
     // Initialize Default Chart
     var stationChart = new IemStationChart("tempChartCont", "JQF", "NC_ASOS", new Date(), "48-hr", "temp");
-    var stationChart2 = new IemStationChart("prcpChartCont", "JQF", "NC_ASOS", new Date(), "48-hr", "prcp");
-    var stationChart3 = new IemStationChart("presChartCont", "JQF", "NC_ASOS", new Date(), "48-hr", "pres");
+    var stationChart2 = new IemStationChart("prcpChartCont", "CLT", "NC_ASOS", new Date("2022-07-10"), "48-hr", "prcp");
     var stationChart4 = new IemStationChart("windChartCont", "JQF", "NC_ASOS", new Date(), "48-hr", "wind");
 });
 
@@ -54,6 +53,7 @@ class IemStationChart {
         this.network = network;
         this.period = period;
         this.endDate = endDate;
+        this.chartType = chart;
         document.getElementById(chartDiv).innerHTML = this.LOADING_BAR;
         
         const instance = this; // Object reference for inside the deferred then
@@ -147,16 +147,18 @@ class IemStationChart {
      */
     createChart() {
         console.log(this.stnData);
+        this.chartData = {}
+        this.chartData["tempF"] = [];
+        this.chartData["dewpF"] = [];
+        this.chartData["presMb"] = [];
+        this.chartData["prcpIn"] = [];
+        this.chartData["pcpnAccum"] = [];
+        this.chartData["windKt"] = [];
+        this.chartData["windDir"] = [];
+        this.chartData["windGust"] = [];
+        this.chartData["timeStamps"] = [];
 
-        var tempF = [];
-        var dewpF = [];
-        var presMb = [];
-        var prcpIn = [];
-        var windKt = [];
-        var windDir = [];
-        var windGust = [];
-        var timeStamps = [];
-
+        var pcpnAccum = 0;
         // Loop through each day of data
         for (var i=0; i < this.stnData.length; i++) {
             // Loop through each hour of data
@@ -164,18 +166,44 @@ class IemStationChart {
                 var valid_date = new Date(this.stnData[i][j].local_valid);
                 valid_date = valid_date.getTime() - (valid_date.getTimezoneOffset() * 60000);
                 
-                tempF.push([valid_date,this.stnData[i][j].tmpf]);
-                dewpF.push([valid_date,this.stnData[i][j].dwpf]);
-                presMb.push([valid_date,this.stnData[i][j].mslp]);
-                prcpIn.push([valid_date,this.stnData[i][j].p01i]);
-                windKt.push([valid_date,this.stnData[i][j].sknt]);
-                windDir.push([valid_date,this.stnData[i][j].drct]);
-                windGust.push([valid_date,this.stnData[i][j].gust]);
-                timeStamps.push(this.stnData[i][j].local_valid)
+                this.chartData["tempF"].push([valid_date,this.stnData[i][j].tmpf]);
+                this.chartData["dewpF"].push([valid_date,this.stnData[i][j].dwpf]);
+
+                // JQF doesnt record MSLP, so we convert the altimeter setting from inHg to mb
+                this.chartData["presMb"].push([valid_date,
+                    this.stnData[i][j].alti / 0.02952998
+                ]);
+                this.chartData["prcpIn"].push([valid_date,this.stnData[i][j].p01i]);
+                this.chartData["pcpnAccum"].push([valid_date,pcpnAccum]);
+                pcpnAccum = pcpnAccum + this.stnData[i][j].p01i;
+                this.chartData["windKt"].push([valid_date,this.stnData[i][j].sknt]);
+                this.chartData["windDir"].push([valid_date,this.stnData[i][j].drct]);
+                this.chartData["windGust"].push([valid_date,this.stnData[i][j].gust]);
+                this.chartData["timeStamps"].push(this.stnData[i][j].local_valid)
             }
         }
 
         // Build Chart
+        if (this.chartType == "temp") {
+            this.chartTitle =  "Temperature/Dewpoint";
+            this.chartSubTitle = "Previous " + this.period + " Period";
+            this.temperatureChart();
+        }
+        else if(this.chartType == "prcp") {
+            this.chartTitle =  "Precipitation Summary";
+            this.chartSubTitle = "Previous " + this.period + " Period";
+            this.precipChart();
+        }
+        else if(this.chartType == "wind") {
+            this.chartTitle =  "Wind Summary";
+            this.chartSubTitle = "Previous " + this.period + " Period";
+            this.windChart();
+        }
+              
+    }
+
+    temperatureChart()
+    {
         this.chartInstance = Highcharts.chart(this.chartDiv, {
             chart: {
                 type: 'spline',
@@ -186,10 +214,10 @@ class IemStationChart {
                 sourceWidth: 1920,
             },
             title: {
-                text: "Temperature/Dewpoint",
+                text: this.chartTitle,
             },
             subtitle: {
-                text: "Previous " + this.period + " Period",
+                text: this.chartSubTitle,
             },
             xAxis: {
                 title: {
@@ -203,11 +231,16 @@ class IemStationChart {
                     }
                 }
             },
-            yAxis: {
+            yAxis: [{
+                title: {
+                    text: 'Pressure (mb)',
+                },
+                opposite: true,
+                },{
                 title: {
                     text: "Degrees F"
-                }
-            },
+                },
+            }],
             plotOptions: {
                 series : {
                     lineWidth: 2,
@@ -225,13 +258,21 @@ class IemStationChart {
             },
             series: [{
                 name: "Temperature (F)",
-                data: tempF,
+                data: this.chartData["tempF"],
                 color: "#CB0003",
+                yAxis: 1,
             },
             {
                 name: "Dewpoint (F)",
-                data: dewpF,
+                data: this.chartData["dewpF"],
                 color: "#008C46",
+                yAxis: 1,
+            },
+            {
+                name: "Pressure (mb)",
+                data: this.chartData["presMb"],
+                color: "#e6e6e6",
+                yAxis: 0,
             },
             ],
             credits: {
@@ -240,7 +281,153 @@ class IemStationChart {
                 href: 'https://mesonet.agron.iastate.edu/',
             },
         });
-        this.chartInstance.reflow();      
+        this.chartInstance.reflow();
+    }
+
+    precipChart() {
+        this.chartInstance = Highcharts.chart(this.chartDiv, {
+            tooltip: {
+                valueDecimals: 2,
+            },
+            chart: {
+                type: 'spline',
+                height: '40%',
+            },
+            title: {
+                text: this.chartTitle,
+            },
+            subtitle: {
+                text: this.chartSubTitle,
+            },
+            xAxis: {
+                title: {
+                    text: "Valid Local Time"
+                },
+                type: 'datetime',
+                labels: {
+                    rotation: -35,
+                    formatter: function() {
+                        return Highcharts.dateFormat('%b-%d %H:%M', this.value);
+                    }
+                }
+            },
+            yAxis: [{
+                title: {
+                    text: 'Accumulated Precipitation (in)',
+                },
+                opposite: true,
+                },
+                {
+                    title: {
+                    text: 'Precipitation (in)',
+                },
+            }],
+            series: [{
+                    type: 'spline',
+                    name: 'Precipitation (in) Accumulation',
+                    data: this.chartData["pcpnAccum"],
+                    color: '#00bd4b',
+                    yAxis: 1,
+                },
+                {
+                    type: 'column',
+                    name: 'Hourly Precipitation (in)',
+                    data: this.chartData["prcpIn"],
+                    color: '#000000',
+                    yAxis: 0,
+                },
+            ],
+            credits: {
+                enabled: true,
+                text: 'Iowa Environmental Mesonet',
+                href: 'https://mesonet.agron.iastate.edu/',
+            },
+            });
+            this.chartInstance.reflow();
+    }
+
+    windChart()
+    {
+        this.chartInstance = Highcharts.chart(this.chartDiv, {
+            chart: {
+                type: 'spline',
+                height: '40%',
+            },
+            exporting: {
+                sourceHeight: 1080,
+                sourceWidth: 1920,
+            },
+            title: {
+                text: this.chartTitle,
+            },
+            subtitle: {
+                text: this.chartSubTitle,
+            },
+            xAxis: {
+                title: {
+                    text: "Valid Local Time"
+                },
+                type: 'datetime',
+                labels: {
+                    rotation: -35,
+                    formatter: function() {
+                        return Highcharts.dateFormat('%b-%d %H:%M', this.value);
+                    }
+                }
+            },
+            yAxis: [{
+                title: {
+                    text: 'Wind Speed (kts)',
+                },
+                opposite: true,
+                },{
+                title: {
+                    text: "Wind Direction"
+                },
+                max: 360,
+                min: 0,
+            }],
+            plotOptions: {
+                series : {
+                    lineWidth: 2,
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle',
+                        radius: 3,
+                        states: {
+                            hover: {
+                                enabled: true
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: "Wind Speed (kts)",
+                data: this.chartData["windKt"],
+                color: "#0666e2",
+                yAxis: 0,
+            },
+            {
+                name: "Wind Direction",
+                data: this.chartData["windDir"],
+                color: "#e6e6e6",
+                yAxis: 1,
+            },
+            {
+                name: "Wind Gust (kts)",
+                data: this.chartData["windGust"],
+                color: "#060ae2",
+                yAxis: 0,
+            },
+            ],
+            credits: {
+                enabled: true,
+                text: 'Iowa Environmental Mesonet',
+                href: 'https://mesonet.agron.iastate.edu/',
+            },
+        });
+        this.chartInstance.reflow();
     }
 
     /**
