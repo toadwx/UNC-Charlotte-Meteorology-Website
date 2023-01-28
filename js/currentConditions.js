@@ -1,7 +1,10 @@
 // On-Load
 $(function() {
     // Initialize Default Chart
-    var stationChart = new IemStationChart("current-conditions-chart", "JQF", "NC_ASOS", new Date(), "48-hr");
+    var stationChart = new IemStationChart("tempChartCont", "JQF", "NC_ASOS", new Date(), "48-hr", "temp");
+    var stationChart2 = new IemStationChart("prcpChartCont", "JQF", "NC_ASOS", new Date(), "48-hr", "prcp");
+    var stationChart3 = new IemStationChart("presChartCont", "JQF", "NC_ASOS", new Date(), "48-hr", "pres");
+    var stationChart4 = new IemStationChart("windChartCont", "JQF", "NC_ASOS", new Date(), "48-hr", "wind");
 });
 
 function dateToString(d) {
@@ -15,6 +18,22 @@ function dateToString(d) {
       stringDay.toString();
 }
 
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+  } 
 
 
 /**
@@ -29,7 +48,7 @@ class IemStationChart {
      * @param {DateTime} endDate DateTime object for the last date in period (i.e. today)
      * @param {string} period Either 3-day, 48-hr, or 24-hr. Limited to prevent IEM abuse (Daryl anger)
      */
-    constructor(chartDiv, stationID, network, endDate, period) {
+    constructor(chartDiv, stationID, network, endDate, period, chart) {
         this.chartDiv = chartDiv;
         this.stationID = stationID;
         this.network = network;
