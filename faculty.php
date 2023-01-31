@@ -42,9 +42,6 @@
                       </form>
                 </div>
               </div>
-          </div>
-          
-          <div class="img-block">
               <div class="container">
                   <img src="images/faculty/jscheff.jpg" alt="Jack Scheff"/>
                   <div class="overlay">
