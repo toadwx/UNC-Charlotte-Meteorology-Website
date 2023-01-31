@@ -22,8 +22,7 @@
                 <div class="li-text">
                   <h5 class="li-head">NCEI Climate at a Glance</h5>
                   <div class="li-sub">
-                    <p>Greenville-Spartanburg</p>
-                    <p>Local area forecasts, alerts, discussions, etc.</p>
+                    <p>Summary of content.</p>
                   </div>
                 </div>
               </a>
@@ -36,7 +35,7 @@
                 <div class="li-text">
                  <h5 class="li-head">CPC ENSO and Oscillations</h5>
                   <div class="li-sub">
-                    <p>Free website for weather model maps</p>
+                    <p>Summary of content.</p>
                   </div>
                 </div>
               </a>
@@ -49,7 +48,7 @@
                 <div class="li-text">
                   <h5 class="li-head">IRI ENSO Forecast Plume</h5>
                   <div class="li-sub">
-                    <p>One-stop shop for tropical weather information</p>
+                    <p>Summary of content.</p>
                   </div>
                 </div>
               </a>
@@ -88,12 +87,12 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://scacis.rcc-acis.org/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq6.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/sc-acis.png" alt="SC-ACIS" />
                 </div>
                 <div class="li-text">
-                  <h5 class="li-head">SC-ACIS and XM-ACIS</h5>
+                  <h5 class="li-head">SC-ACIS</h5>
                   <div class="li-sub">
                     <p>Summary of content.</p>
                   </div>
@@ -101,9 +100,22 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://xmacis.rcc-acis.org/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq7.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/xm-acis.png" alt="XM-ACIS" />
+                </div>
+                <div class="li-text">
+                  <h5 class="li-head">XM-ACIS</h5>
+                  <div class="li-sub">
+                    <p>Summary of content.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://builder.rcc-acis.org/" class="inner" target="_blank">
+                <div class="li-img">
+                  <img src="images/resource-thumbnails/acis-query.png" alt="ACIS Web Query" />
                 </div>
                 <div class="li-text">
                  <h5 class="li-head">ACIS Web Query Builder</h5>
@@ -114,9 +126,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://www.cocorahs.org/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq8.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/cocorahs.png" alt="CoCoRaHS" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">CoCoRaHS</h5>
@@ -134,9 +146,9 @@
           <h4>Climate Change</h4>
           <ul class="list img-list">
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://www.ncei.noaa.gov/access/monitoring/monthly-report/national/?Set-Language=ar" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq9.jpg" alt="NCEI National Climate Report" />
+                  <img src="images/resource-thumbnails/ncei-report.png" alt="NCEI National Climate Report" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">NCEI National Climate Report</h5>
@@ -147,9 +159,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://www.ncei.noaa.gov/access/monitoring/cei/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq10.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/climate-index.png" alt="Climate Extremes Index" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">NCEI Climate Extremes Index</h5>
@@ -160,12 +172,32 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://data.giss.nasa.gov/gistemp/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq11.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/globe-temp.png" alt="Global Temperatures" />
                 </div>
                 <div class="li-text">
-                  <h5 class="li-head">Title of Content</h5>
+                  <h5 class="li-head">Global Temperature Analysis</h5>
+                  <div class="li-sub">
+                    <p>Summary of content.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          
+          <br>
+          <hr style="width:80%;color:gray;">
+          
+          <h4>Air Quality</h4>
+          <ul class="list img-list">
+            <li>
+              <a href="https://map.purpleair.com/1/mAQI/a10/p604800/cC0#11/35.3021/-80.739" class="inner" target="_blank">
+                <div class="li-img">
+                  <img src="images/resource-thumbnails/purple-air.png" alt="Purple Air" />
+                </div>
+                <div class="li-text">
+                  <h5 class="li-head">Purple Air</h5>
                   <div class="li-sub">
                     <p>Summary of content.</p>
                   </div>
@@ -173,25 +205,12 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="http://aqicn.org/map/northamerica/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq12.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/aqi-map.png" alt="AQI Map" />
                 </div>
                 <div class="li-text">
-                  <h5 class="li-head">Title of Content</h5>
-                  <div class="li-sub">
-                    <p>Summary of content.</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="inner" target="_blank">
-                <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq13.jpg" alt="Hot air balloons" />
-                </div>
-                <div class="li-text">
-                  <h5 class="li-head">Title of Content</h5>
+                  <h5 class="li-head">Air Quality Index Map</h5>
                   <div class="li-sub">
                     <p>Summary of content.</p>
                   </div>
