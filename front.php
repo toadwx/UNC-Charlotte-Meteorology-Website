@@ -67,9 +67,6 @@
                         <td id="day3"></td>
                         <td id="day4"></td>
                         <td id="day5"></td>
-                        <td id="day6"></td>
-                        <td id="day7"></td>
-                        <td id="day8"></td>
                     </tr>
                     <tr>
                         <td id="day0_img"></td>
@@ -78,12 +75,9 @@
                         <td id="day3_img"></td>
                         <td id="day4_img"></td>
                         <td id="day5_img"></td>
-                        <td id="day6_img"></td>
-                        <td id="day7_img"></td>
-                        <td id="day8_img"></td>
                     </tr>
                     <tr>
-                        <td><br/></td>
+                        <!--<td><br/></td>-->
                     </tr>
                     <tr>
                         <td id="day0_temp"></td>
@@ -92,9 +86,6 @@
                         <td id="day3_temp"></td>
                         <td id="day4_temp"></td>
                         <td id="day5_temp"></td>
-                        <td id="day6_temp"></td>
-                        <td id="day7_temp"></td>
-                        <td id="day8_temp"></td>
                     </tr>
                 </tbody>
             </table>

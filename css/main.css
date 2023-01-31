@@ -41,6 +41,7 @@ table {
 /* Current Conditions panel */
 .current {
     flex-grow: 1;
+    max-width: 550px;
 }
 
 .current img {
@@ -53,6 +54,7 @@ table {
     position: relative;
     flex-grow: 2;
     align-self: baseline;
+    min-width: 750px;
 }
 
 .forecast table {
@@ -94,11 +96,11 @@ table {
     position: relative;
     flex: 33.33%;
     background-color: #005035;
+    min-width: 500px;
 }
 
 .graphic-link-image{
     width: 100%;
-    opacity: 1.0;
 }
 
 .graphic-link-overlay {
