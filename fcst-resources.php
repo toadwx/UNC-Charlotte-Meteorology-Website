@@ -27,6 +27,19 @@
               </a>
             </li>
             <li>
+              <a href="https://spc.noaa.gov" class="inner" target="_blank">
+                <div class="li-img">
+                  <img src="https://www.spc.noaa.gov/products/outlook/day1otlk_sm.gif" alt="Storm Prediction Center" />
+                </div>
+                <div class="li-text">
+                 <h5 class="li-head">Storm Prediction Center</h5>
+                  <div class="li-sub">
+                    <p>Summary of content.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
               <a href="https://www.pivotalweather.com" class="inner" target="_blank">
                 <div class="li-img">
                   <img src="https://images.squarespace-cdn.com/content/v1/5c438cac365f022c900e099d/1547931816937-L3YSBFXFCYALTOOGC4OQ/favicon.ico?format=100w" alt="Pivotal Weather" />
@@ -53,12 +66,12 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="http://www.meteo.psu.edu/fxg1/ewall.html" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq4.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/ewall.png" alt="Penn State e-Wall" />
                 </div>
                 <div class="li-text">
-                  <h5 class="li-head">eWall</h5>
+                  <h5 class="li-head">Penn State e-Wall</h5>
                   <div class="li-sub">
                     <p>Summary of content.</p>
                   </div>
@@ -66,9 +79,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://meteor.geol.iastate.edu/~ckarsten/bufkit/image_loader.phtml?site=kclt" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq5.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/meteogram.png" alt="Iowa State Meteograms" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">Iowa State Meteograms</h5>
@@ -79,12 +92,25 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://www.wpc.ncep.noaa.gov/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq5.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/wpc.png" alt="Weather Prediction Center" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">Weather Prediction Center</h5>
+                  <div class="li-sub">
+                    <p>Summary of content.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.spc.noaa.gov/exper/sref/srefplumes/" class="inner" target="_blank">
+                <div class="li-img">
+                  <img src="images/resource-thumbnails/sref-plume.png" alt="NCEP SREF Plumes" />
+                </div>
+                <div class="li-text">
+                  <h5 class="li-head">NCEP SREF Plumes</h5>
                   <div class="li-sub">
                     <p>Summary of content.</p>
                   </div>
@@ -99,9 +125,9 @@
           <h4>Upper Air Data</h4>
           <ul class="list img-list">
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://weather.uwyo.edu/upperair/sounding.html" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq6.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/wyoming-sounding.png" alt="University of Wyoming Sounding Analysis" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">University of Wyoming</h5>
@@ -112,12 +138,12 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://www.spc.noaa.gov/exper/soundings/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq7.jpg" alt="Hot air balloons" />
+                  <img src="https://www.spc.noaa.gov/exper/soundings/23012812_OBS/GSO.gif" alt="SPC Sounding Analysis" />
                 </div>
                 <div class="li-text">
-                 <h5 class="li-head">Storm Prediction Center</h5>
+                 <h5 class="li-head">SPC Sounding Analysis</h5>
                   <div class="li-sub">
                     <p>Summary of content.</p>
                   </div>
@@ -125,9 +151,22 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://www.spc.noaa.gov/obswx/maps/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq8.jpg" alt="Hot air balloons" />
+                  <img src="https://www.spc.noaa.gov/exper/uair.gif" alt="SPC Upper Air Maps" />
+                </div>
+                <div class="li-text">
+                 <h5 class="li-head">SPC Upper Air Maps</h5>
+                  <div class="li-sub">
+                    <p>Summary of content.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://weather.cod.edu/analysis/" class="inner" target="_blank">
+                <div class="li-img">
+                  <img src="images/resource-thumbnails/cod-upper.png" alt="College of DuPage" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">College of DuPage</h5>
@@ -145,22 +184,22 @@
           <h4>Tropical</h4>
           <ul class="list img-list">
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://www.tropicaltidbits.com" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq9.jpg" alt="Hot air balloons" />
+                  <img src="https://www.tropicaltidbits.com/images/appicon.svg" alt="Tropical Tidbits" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">Tropical Tidbits</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>One-stop shop for tropical weather information</p>
                   </div>
                 </div>
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://www.nhc.noaa.gov/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq10.jpg" alt="Hot air balloons" />
+                  <img src="https://www.nhc.noaa.gov/data/tracks/tracks-at-2020.png" alt="National Hurricane Center" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">National Hurricane Center</h5>
@@ -171,9 +210,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="http://tropic.ssec.wisc.edu/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq11.jpg" alt="Hot air balloons" />
+                  <img src="http://tropic.ssec.wisc.edu/storm_archive/montage/atlantic/2020/LAURA20-track.gif" alt="CIMSS Tropical Cyclones" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">CIMSS Tropical Cyclones</h5>
@@ -184,9 +223,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://www.fnmoc.navy.mil/tcweb/cgi-bin/tc_home.cgi" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq12.jpg" alt="Hot air balloons" />
+                  <img src="https://www.fnmoc.navy.mil/tcweb/dynamic/thumbnails/tc_thumbs/20230128.1811.gw1.89hbt.98W.INVEST.20kts.1007mb.0.2N.107.3E.82pc.jpg" alt="FNMOC" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">FNMOC</h5>
@@ -204,9 +243,9 @@
           <h4>Surface Observations</h4>
           <ul class="list img-list">
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://weather.rap.ucar.edu/surface/displaySfc.php?region=clt" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq13.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/ucar-sfc.png" alt="UCAR Surface Obs" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">UCAR Surface Map</h5>
@@ -217,9 +256,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://www.weather.gov/wrh/timeseries?site=KCLT" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq13.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/nws-timeseries.png" alt="NWS Time Series" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">NWS Station Timeseries</h5>
@@ -237,9 +276,9 @@
           <h4>Satellite and Radar</h4>
           <ul class="list img-list">
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://radar.weather.gov/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq13.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/nws-radar.png" alt="NWS Radar" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">NWS Radar</h5>
@@ -250,9 +289,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://weather.cod.edu/satrad/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq13.jpg" alt="Hot air balloons" />
+                  <img src="https://weather.cod.edu/assets/images/nexlab-logo/nexlab-logo250x250.png" alt="College of DuPage Satellite" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">College of DuPage</h5>
@@ -263,9 +302,9 @@
               </a>
             </li>
             <li>
-              <a href="#" class="inner" target="_blank">
+              <a href="https://tropic.ssec.wisc.edu/tropic.php" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/12005/balloon-sq13.jpg" alt="Hot air balloons" />
+                  <img src="images/resource-thumbnails/cimss-sat.png" alt="CIMSS Satellite" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">CIMSS Tropical</h5>

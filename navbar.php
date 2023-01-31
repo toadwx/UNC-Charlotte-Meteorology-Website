@@ -18,6 +18,7 @@
                 <div class="dropdown-content">
                 <a href="current.php">Current Conditions</a><br>
                 <a href="fcst-resources.php">Forecasting Resources</a><br>
+                <a href="https://map.purpleair.com/1/mAQI/a10/p604800/cC0#10.44/35.2931/-80.7304" target="_blank">Air Quality</a><br>
                 </div>
             </div>
             <div class="dropdown">
@@ -35,8 +36,8 @@
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                <a href="https://geoearth.charlotte.edu/undergraduate-programs/meteorology">Meteorology Program</a><br>
-                <a href="https://geoearth.charlotte.edu/graduate-programs/graduate-program-information">Graduate Programs</a><br>
+                <a href="https://geoearth.charlotte.edu/undergraduate-programs/meteorology" target="_blank">Meteorology Program</a><br>
+                <a href="https://geoearth.charlotte.edu/graduate-programs/graduate-program-information" target="_blank">Graduate Programs</a><br>
                 <a href="#">Chi Epsilon Pi</a><br>
                 <a href="faculty.php">Faculty</a><br>
                 </div>
