@@ -92,6 +92,11 @@
             <br>
             <div id="forecasterName" class="forecast-attribution">Forecast by: Ricky Matthews</div>
         </div>
+        
+        <!--<div class="tweets">
+            <a class="twitter-timeline" data-height="400" data-width="400" href="https://twitter.com/UNCCWeather?ref_src=twsrc%5Etfw">Tweets by UNCCWeather</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div> -->
     </div>
     
     <div class="lower">
