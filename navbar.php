@@ -29,7 +29,7 @@
                 <a href="climate-resources.php">Climate Resources</a><br>
                 </div>
             </div>
-            <a href="#news">STORM</a>
+            <a href="storm.php">STORM</a>
             <div class="dropdown">
                 <button class="dropbtn">Academics
                 <i class="fa fa-caret-down"></i>

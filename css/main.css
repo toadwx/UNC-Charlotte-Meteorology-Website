@@ -25,6 +25,9 @@ table {
     text-align: center;
     height: 30%;
     margin-bottom: 1em;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .upper h3 {
@@ -55,18 +58,20 @@ table {
     flex-grow: 2;
     align-self: baseline;
     min-width: 750px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .forecast table {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
     font-family: 'Oswald', sans-serif;
 }
 
 .forecast img {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 120px;
 }
 
 .forecast-attribution {
@@ -78,6 +83,10 @@ table {
     font-size: 1.1em;
     color: #005035;
     text-decoration: none;
+}
+
+.tweets {
+  flex-grow: 1;
 }
 
 /* Main lower content area */
@@ -105,7 +114,7 @@ table {
 
 .graphic-link-overlay {
     position: absolute;
-    width: 100%;
+    width: 95%%;
     top: 0;
     color: white;
     text-align: left;
@@ -340,3 +349,72 @@ Radio Button Classes
       border-radius: 10%;
       background: white;
   }
+
+/* STORM Page Styling */
+.storm {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.storm h3 {
+    position: relative;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    color: #005035;
+    text-decoration: none;
+}
+
+.storm h4 {
+    position: relative;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    letter-spacing: 1.3px;
+    color: #005035;
+    text-decoration: none;
+}
+
+.storm p {
+    text-align: justify;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.storm-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.storm-info a {
+    text-decoration: underline;
+    font-weight: 500;
+    font-style: italic;
+    color: #005035;
+}
+
+.storm-info img {
+    height: auto;
+    width: 550px;
+}
+
+.info-block {
+    display: block;
+    margin: 1em;
+    flex-grow: 1;
+    min-width: 500px;
+    max-width: 600px;
+}
+
+.social img {
+    margin: 0 0.5em 0.5em 0.5em;
+}
