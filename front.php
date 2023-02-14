@@ -4,7 +4,7 @@
         <div class="current">
             <h3>Current Conditions</h3>
             
-            <table style="width:90%;margin-left:5%;">
+            <table style="width:75%;margin-left:12%;">
                 <tbody>
                     <tr>
                         <td style="text-align:center">
@@ -21,7 +21,7 @@
                 </tbody>
             </table>
             
-            <table style="width:75%;margin-left:12%;">
+            <table style="width:75%; margin-left:12%;" class="curr-table">
                 <tbody>
                     <tr>
                         <td>Temperature</td>
@@ -40,12 +40,8 @@
                         <td id="w" style="text-align:right;"></td>
                     </tr>
                     <tr>
-                        <td>Daily Max Temperature</td>
-                        <td id="Tmax" style="text-align:right;"></td>
-                    </tr>
-                    <tr>
-                        <td>Daily Min Temperature</td>
-                        <td id="Tmin" style="text-align:right;"></td>
+                        <td>Today's High/Low</td>
+                        <td id="today-climo" style="text-align:right;"></td>
                     </tr>
                     <tr>
                         <td>Daily Rainfall</td>
@@ -98,7 +94,7 @@
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div> -->
     </div>
-    
+    <br>
     <div class="lower">
         <a href="/" class="graphic-link w50">
             <img src="images/clt-lightning.jpg" class="graphic-link-image">

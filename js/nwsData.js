@@ -1,6 +1,6 @@
 // Update Intervals
 fcst_intvl = 3600 * 1000;
-stn_intvl = 300 * 1000;
+student_fcst = false;
 
 // Initial load
 $(document).ready(function() {
@@ -62,5 +62,12 @@ function parseFcst(Data) {
   // Update front page current conditions
   document.getElementById("current_img").innerHTML = "<img src=" + currIcon + " />";
   document.getElementById("current_cond").innerHTML = "<b>" + currCond + "</b>";
+  
+  // Update appropriate forecast attribution
+  if (student_fcst){
+    document.getElementById("forecasterName").innerHTML = "Forecast by: Ricky Matthews";
+  }else{
+    document.getElementById("forecasterName").innerHTML = "Forecast by: National Weather Service - GSP";
+  }
 
 }

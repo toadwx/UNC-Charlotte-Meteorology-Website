@@ -45,11 +45,17 @@ table {
 .current {
     flex-grow: 1;
     max-width: 550px;
+    min-width: 350px;
 }
 
 .current img {
     height: 150px;
     width: 150px;
+}
+
+.curr-table, .curr-table th, .curr-table td {
+    padding: 0 0.25em 0 0.25em;
+    margin-top: 0.5em;
 }
 
 /* Forecast Panel */
