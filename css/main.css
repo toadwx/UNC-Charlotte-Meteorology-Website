@@ -424,3 +424,30 @@ Radio Button Classes
 .social img {
     margin: 0 0.5em 0.5em 0.5em;
 }
+
+.chi-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.chi-info a {
+    text-decoration: underline;
+    font-weight: 500;
+    font-style: italic;
+    color: #005035;
+}
+
+.chi-info img {
+    height: auto;
+    width: 250px;
+}
+
+.chi-block {
+    display: block;
+    margin: 1em;
+    flex-grow: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
