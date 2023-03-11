@@ -229,6 +229,7 @@ table {
   font-weight: 500;
   font-size: 1em;
   letter-spacing: 1.5px;
+  cursor: pointer;
 }
 
 /* Current Conditions Page Formatting */
