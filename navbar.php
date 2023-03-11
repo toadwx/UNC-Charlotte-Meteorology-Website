@@ -25,7 +25,7 @@
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                <a href="#">McEniry Station Archive</a><br>
+                <a href="download-data.php">McEniry Station Archive</a><br>
                 <a href="climate-resources.php">Climate Resources</a><br>
                 </div>
             </div>
