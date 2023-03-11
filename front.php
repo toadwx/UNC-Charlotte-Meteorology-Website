@@ -96,7 +96,7 @@
     </div>
     <br>
     <div class="lower">
-        <a href="/" class="graphic-link w50">
+        <a href="storm.php" class="graphic-link w50">
             <img src="images/clt-lightning.jpg" class="graphic-link-image">
             <div class="graphic-link-overlay">
                 <h2>STORM</h2>
