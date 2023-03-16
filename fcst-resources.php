@@ -21,7 +21,7 @@
                   <h5 class="li-head">National Weather Service</h5>
                   <div class="li-sub">
                     <p>Greenville-Spartanburg</p>
-                    <p>Local area forecasts, alerts, discussions, etc.</p>
+                    <p>Local area forecasts, alerts, discussions, and more</p>
                   </div>
                 </div>
               </a>
@@ -34,7 +34,7 @@
                 <div class="li-text">
                  <h5 class="li-head">Storm Prediction Center</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Official source for national severe weather outlooks and information</p>
                   </div>
                 </div>
               </a>
@@ -47,7 +47,7 @@
                 <div class="li-text">
                  <h5 class="li-head">Pivotal Weather</h5>
                   <div class="li-sub">
-                    <p>Free website for weather model maps</p>
+                    <p>Free short and medium-term weather model maps with several helpful features</p>
                   </div>
                 </div>
               </a>
@@ -60,7 +60,7 @@
                 <div class="li-text">
                   <h5 class="li-head">Tropical Tidbits</h5>
                   <div class="li-sub">
-                    <p>One-stop shop for tropical weather information</p>
+                    <p>One-stop shop for tropical weather information including discussions, model and satellite data, and hurricane hunter observations</p>
                   </div>
                 </div>
               </a>
@@ -73,7 +73,7 @@
                 <div class="li-text">
                   <h5 class="li-head">Penn State e-Wall</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Short and medium-term weather model map resource produced by Penn State University</p>
                   </div>
                 </div>
               </a>
@@ -86,7 +86,7 @@
                 <div class="li-text">
                   <h5 class="li-head">Iowa State Meteograms</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Time-series operational model data for select stations across the United States</p>
                   </div>
                 </div>
               </a>
@@ -99,7 +99,7 @@
                 <div class="li-text">
                   <h5 class="li-head">Weather Prediction Center</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Official source for national hydro/winter weather information</p>
                   </div>
                 </div>
               </a>
@@ -112,7 +112,7 @@
                 <div class="li-text">
                   <h5 class="li-head">NCEP SREF Plumes</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Short-term ensemble model time-series data for specific locations across the United States</p>
                   </div>
                 </div>
               </a>
@@ -132,7 +132,7 @@
                 <div class="li-text">
                   <h5 class="li-head">University of Wyoming</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Archived upper-air sounding analysis data for the United States</p>
                   </div>
                 </div>
               </a>
@@ -140,12 +140,12 @@
             <li>
               <a href="https://www.spc.noaa.gov/exper/soundings/" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://www.spc.noaa.gov/exper/soundings/23012812_OBS/GSO.gif" alt="SPC Sounding Analysis" />
+                  <img src="images/resource-thumbnails/spc-sounding.png" alt="SPC Sounding Analysis" />
                 </div>
                 <div class="li-text">
                  <h5 class="li-head">SPC Sounding Analysis</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Observed upper-air sounding data across the United States</p>
                   </div>
                 </div>
               </a>
@@ -158,7 +158,7 @@
                 <div class="li-text">
                  <h5 class="li-head">SPC Upper Air Maps</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Upper air observation data maps produced by the SPC (including archived data)</p>
                   </div>
                 </div>
               </a>
@@ -171,7 +171,7 @@
                 <div class="li-text">
                   <h5 class="li-head">College of DuPage</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Surface and upper-air analysis data and maps</p>
                   </div>
                 </div>
               </a>
@@ -191,7 +191,7 @@
                 <div class="li-text">
                   <h5 class="li-head">Tropical Tidbits</h5>
                   <div class="li-sub">
-                    <p>One-stop shop for tropical weather information</p>
+                    <p>One-stop shop for tropical weather information including discussions, model and satellite data, and hurricane hunter observations</p>
                   </div>
                 </div>
               </a>
@@ -204,7 +204,7 @@
                 <div class="li-text">
                   <h5 class="li-head">National Hurricane Center</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Official source for Atlantic and East Pacific Tropical Cyclones</p>
                   </div>
                 </div>
               </a>
@@ -217,7 +217,7 @@
                 <div class="li-text">
                   <h5 class="li-head">CIMSS Tropical Cyclones</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Tropical cyclone satellite observations for storms globally</p>
                   </div>
                 </div>
               </a>
@@ -225,12 +225,12 @@
             <li>
               <a href="https://www.fnmoc.navy.mil/tcweb/cgi-bin/tc_home.cgi" class="inner" target="_blank">
                 <div class="li-img">
-                  <img src="https://www.fnmoc.navy.mil/tcweb/dynamic/thumbnails/tc_thumbs/20230128.1811.gw1.89hbt.98W.INVEST.20kts.1007mb.0.2N.107.3E.82pc.jpg" alt="FNMOC" />
+                  <img src="images/resource-thumbnails/fnmoc.jpg" alt="FNMOC" />
                 </div>
                 <div class="li-text">
                   <h5 class="li-head">FNMOC</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Live and archived tropical cyclone satellite observations</p>
                   </div>
                 </div>
               </a>
@@ -250,7 +250,7 @@
                 <div class="li-text">
                   <h5 class="li-head">UCAR Surface Map</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Near real-time surface observations from ASOS weather stations</p>
                   </div>
                 </div>
               </a>
@@ -261,9 +261,9 @@
                   <img src="images/resource-thumbnails/nws-timeseries.png" alt="NWS Time Series" />
                 </div>
                 <div class="li-text">
-                  <h5 class="li-head">NWS Station Timeseries</h5>
+                  <h5 class="li-head">NWS Station Time Series</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Official NWS time-series station observation data</p>
                   </div>
                 </div>
               </a>
@@ -283,7 +283,7 @@
                 <div class="li-text">
                   <h5 class="li-head">NWS Radar</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Official NWS Doppler Radar web application</p>
                   </div>
                 </div>
               </a>
@@ -296,7 +296,7 @@
                 <div class="li-text">
                   <h5 class="li-head">College of DuPage</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>GOES satellite data with several available products and regions</p>
                   </div>
                 </div>
               </a>
@@ -309,7 +309,7 @@
                 <div class="li-text">
                   <h5 class="li-head">CIMSS Tropical</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Satellite observations for several global regions</p>
                   </div>
                 </div>
               </a>
