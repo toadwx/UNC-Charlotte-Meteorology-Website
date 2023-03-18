@@ -5,6 +5,9 @@ $(function() {
     $('input[name="timescaleRadio"]').on('input', function(e) {
         loadGraphs();
     });
+
+    var today = new Date();
+    document.getElementById('customDatePick').value = today.toISOString().substr(0,10);
 });
 
 function loadGraphs() {
