@@ -33,6 +33,7 @@ function loadGraphs() {
     var stationGraph = new IemStationChart("tempChartCont", "JQF", "NC_ASOS", endDate, timeScale, "temp");
     var stationGraph2 = new IemStationChart("prcpChartCont", "JQF", "NC_ASOS", endDate, timeScale, "prcp");
     var stationGraph3 = new IemStationChart("windChartCont", "JQF", "NC_ASOS", endDate, timeScale, "wind");
+    var stationGraph4 = new IemStationTable("tableChart", "JQF", "NC_ASOS", endDate, timeScale);
 }
 
 function dateToString(d) {
@@ -62,6 +63,187 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   } 
+
+class IemStationTable {
+    LOADING_BAR = `PROGRESS_BAR HTML`;
+    /**
+     * 
+     * @param {string} chartDiv ID of HighCharts container
+     * @param {DateTime} endDate DateTime object for the last date in period (i.e. today)
+     * @param {string} period Either 3-day, 48-hr, or 24-hr. Limited to prevent IEM abuse (Daryl anger)
+     */
+    constructor(chartDiv, stationID, network, endDate, period) {
+        this.chartDiv = chartDiv;
+        this.stationID = stationID;
+        this.network = network;
+        this.period = period;
+        this.endDate = endDate;
+        document.getElementById(chartDiv).innerHTML = this.LOADING_BAR;
+        
+        const instance = this; // Object reference for inside the deferred then
+        /*
+        Not pretty, but we basically switch through fixed use cases so we aren't building a 
+        date looper (creating abuse opportunities). Each case subtracts from the end date to
+        find the fixed days of data we need. I guess this is a limitation of IEM, but hey it's
+        better than parsing the raw data! (Makes me appreciate the flexible start/end stamps
+        for ACIS calls)
+        */
+        if (period == "3-day"){
+            var dayOne = new Date(endDate);
+            dayOne.setDate(endDate.getDate() - 2);
+            var dayTwo = new Date(endDate);
+            dayOne.setDate(endDate.getDate() - 1);
+            var dayThree = new Date(endDate);
+
+            // Handles multiple deferred calls so we dont end up with a nested mess
+            $.when(
+                instance.getStationData(dateToString(dayOne)),
+                instance.getStationData(dateToString(dayTwo)),
+                instance.getStationData(dateToString(dayThree))
+            ).then(function(stnDataOne, stnDataTwo, stnDataThree) {
+                // Check for errors
+                // Combine JSON data into one package
+                instance.stnData = [stnDataOne[0].data, stnDataTwo[0].data, stnDataThree[0].data];
+
+                // Finally dig into the data to make chart
+                instance.createTable();
+            }, function() {
+                instance.exception("There was an error recieving data from IEM");
+            });
+        }
+        else if(period == "48-hr") {
+            var dayOne = new Date(endDate);
+            dayOne.setDate(endDate.getDate() - 1);
+            var dayTwo = new Date(endDate);
+            
+            // Handles multiple deferred calls so we dont end up with a nested mess
+            $.when(
+                instance.getStationData(dateToString(dayOne)),
+                instance.getStationData(dateToString(dayTwo))
+            ).then(function(stnDataOne, stnDataTwo) {
+                // Check for errors
+                // Combine JSON data into one package
+                instance.stnData = [stnDataOne[0].data, stnDataTwo[0].data];
+
+                // Finally dig into the data to make chart
+                instance.createTable();
+            }, function() {
+                instance.exception("There was an error recieving data from IEM");
+            });
+        }
+        else if (period == "24-hr") {
+            var dayOne = new Date(endDate);
+
+            // Handles multiple deferred calls so we dont end up with a nested mess
+            $.when(
+                instance.getStationData(dateToString(dayOne))
+            ).then(function(stnDataOne) {
+                // Check for errors
+                // Combine JSON data into one package
+                instance.stnData = [stnDataOne.data];
+
+                // Finally dig into the data to make chart
+                instance.createTable();
+            }, function() {
+                instance.exception("There was an error recieving data from IEM");
+            });
+        }
+    }
+
+    /**
+     * Gets daily station obs data from IEM, returns AJAX call
+     */
+    getStationData(dateString)
+    {
+        var iemURL = "https://mesonet.agron.iastate.edu/api/1/obhistory.json?network="
+            + this.network + "&station=" + this.stationID + "&date=" + dateString + "&full=true";
+        
+        return $.ajax({
+            timeout: 10000,
+            url: iemURL,
+            type: 'GET',
+            crossDomain: true
+        });
+    }
+
+    createTable()
+    {
+        this.chartData = {}
+        this.chartData["tempF"] = [];
+        this.chartData["dewpF"] = [];
+        this.chartData["presMb"] = [];
+        this.chartData["prcpIn"] = [];
+        this.chartData["pcpnAccum"] = [];
+        this.chartData["windKt"] = [];
+        this.chartData["windDir"] = [];
+        this.chartData["windGust"] = [];
+        this.chartData["timeStamps"] = [];
+
+        var pcpnAccum = 0;
+        // Loop through each day of data
+        for (var i=0; i < this.stnData.length; i++) {
+            // Loop through each hour of data
+            for (var j=0; j < this.stnData[i].length; j++) {
+                var valid_date = new Date(this.stnData[i][j].local_valid);
+                valid_date = valid_date.getTime() - (valid_date.getTimezoneOffset() * 60000);
+                
+                this.chartData["tempF"].push([valid_date,this.stnData[i][j].tmpf]);
+                this.chartData["dewpF"].push([valid_date,this.stnData[i][j].dwpf]);
+
+                // JQF doesnt record MSLP, so we convert the altimeter setting from inHg to mb
+                this.chartData["presMb"].push([valid_date,
+                    parseInt(this.stnData[i][j].alti / 0.02952998)
+                ]);
+                this.chartData["prcpIn"].push([valid_date,this.stnData[i][j].p01i.toFixed(2)]);
+                pcpnAccum = (pcpnAccum + this.stnData[i][j].p01i);
+                this.chartData["pcpnAccum"].push([valid_date,pcpnAccum.toFixed(2)]);
+                this.chartData["windKt"].push([valid_date,this.stnData[i][j].sknt]);
+                this.chartData["windDir"].push([valid_date,this.stnData[i][j].drct]);
+                this.chartData["windGust"].push([valid_date,this.stnData[i][j].gust]);
+                this.chartData["timeStamps"].push(this.stnData[i][j].local_valid)
+            }
+        }
+
+        // Populate table
+        var tableElement = document.getElementById(this.chartDiv);
+        tableElement.innerHTML = "";
+
+        var headers = {
+            "timeStamps": "Date/Time", 
+            "tempF": "Temperature (F)", 
+            "dewpF": "Dewpoint (F)", 
+            "presMb": "Pressure (mb)", 
+            "prcpIn": "Precipitation (in)", 
+            "windKt": "Wind Speed (kts)", 
+            "windDir": "Wind Direction (deg)", 
+            "windGust": "Wind Gust (kts)"
+        };
+        var headerRow = document.createElement("tr");
+        for (var i=0; i < Object.keys(headers).length; i++) {
+            var th = document.createElement("th");
+            th.innerHTML = headers[Object.keys(headers)[i]];
+            headerRow.appendChild(th);
+        }
+        tableElement.appendChild(headerRow);
+
+        // For each timestamp
+        for (var i=0; i < this.chartData["timeStamps"].length; i++) {
+            var tr = document.createElement("tr");
+            // For each column
+            for (var j=0; j < Object.keys(headers).length; j++) {
+                var td = document.createElement("td");
+                if (j == 0) {
+                    td.innerHTML = this.chartData[Object.keys(headers)[j]][i];
+                }
+                else {
+                    td.innerHTML = this.chartData[Object.keys(headers)[j]][i][1]
+                }
+                tr.appendChild(td);
+            }
+            tableElement.appendChild(tr);
+        }
+    }
+}
 
 
 /**
@@ -465,4 +647,35 @@ class IemStationChart {
     exception(message) {
         document.getElementById(this.chartDiv).innerHTML = message;
     }
+}
+
+// Converts table to CSV, see https://stackoverflow.com/questions/15547198/export-html-table-to-csv-using-vanilla-javascript
+function tableToCSV(table_id, separator = ',') {
+    // Select rows from table_id
+    var rows = document.querySelectorAll('table#' + table_id + ' tr');
+    // Construct csv
+    var csv = [];
+    for (var i = 0; i < rows.length; i++) {
+        var row = [], cols = rows[i].querySelectorAll('td, th');
+        for (var j = 0; j < cols.length; j++) {
+            // Clean innertext to remove multiple spaces and jumpline (break csv)
+            var data = cols[j].innerText.replace(/(\r\n|\n|\r)/gm, '').replace(/(\s\s)/gm, ' ')
+            // Escape double-quote with double-double-quote (see https://stackoverflow.com/questions/17808511/properly-escape-a-double-quote-in-csv)
+            data = data.replace(/"/g, '""');
+            // Push escaped string
+            row.push('"' + data + '"');
+        }
+        csv.push(row.join(separator));
+    }
+    var csv_string = csv.join('\n');
+    // Download it
+    var filename = 'export_wxData_' + new Date().toLocaleDateString() + '.csv';
+    var link = document.createElement('a');
+    link.style.display = 'none';
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'data:text/csv;charset=utf-8,' + encodeURIComponent(csv_string));
+    link.setAttribute('download', filename);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 }

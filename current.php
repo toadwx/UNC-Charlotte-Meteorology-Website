@@ -30,11 +30,15 @@
             <button id="defaultTabButton" class="tablinks active" onclick="openTab(event, 'tempChartCont')">Temperatures</button>
             <button class="tablinks" onclick="openTab(event, 'prcpChartCont')">Precipitation</button>
             <button class="tablinks" onclick="openTab(event, 'windChartCont')">Wind</button>
+            <button class="tablinks" onclick="openTab(event, 'tableChartCont')">Data Table</button>
         </div>
         <div id="tempChartCont" class="tabcontent" style="display:block"><div id="tempChart"></div></div>
         <div id="prcpChartCont" class="tabcontent"><div id="prcpChart"></div></div>
         <div id="windChartCont" class="tabcontent"><div id="windChart"></div></div>
-
+        <div id="tableChartCont" class="tabcontent">
+            <button id="downloadCSV" onclick="tableToCSV('tableChart')">Download CSV</button>
+            <table id="tableChart" class="data-table"></table>
+        </div>
         </div>
     
         <?php include("footer.php");?>
