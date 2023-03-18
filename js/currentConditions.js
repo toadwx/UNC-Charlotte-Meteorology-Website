@@ -65,7 +65,7 @@ function openTab(evt, tabName) {
   } 
 
 class IemStationTable {
-    LOADING_BAR = `PROGRESS_BAR HTML`;
+    LOADING_BAR = `<img src='images/Bar Chart-1s-200px.gif'>`;
     /**
      * 
      * @param {string} chartDiv ID of HighCharts container
@@ -250,7 +250,7 @@ class IemStationTable {
  * This class creates a HighCharts chart using IEM daily summary data
  */
 class IemStationChart {
-    LOADING_BAR = `PROGRESS_BAR HTML`;
+    LOADING_BAR = `<img src='images/Bar Chart-1s-200px.gif'>`;
 
     /**
      * 
