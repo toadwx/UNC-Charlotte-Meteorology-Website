@@ -1,6 +1,6 @@
 <div class="page-footer">
     <img src="images/background_clt.jpg" class="back-image"/>
-    <div class="container">
+    <div class="footer-container">
         <div class="col">
             <h3>Campus Links</h3>
             <ul>
