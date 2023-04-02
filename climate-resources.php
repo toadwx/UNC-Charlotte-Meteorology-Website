@@ -22,7 +22,7 @@
                 <div class="li-text">
                   <h5 class="li-head">NCEI Climate at a Glance</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>A large collection of historical weather information including graphs, maps, and datasets</p>
                   </div>
                 </div>
               </a>
@@ -35,7 +35,7 @@
                 <div class="li-text">
                  <h5 class="li-head">CPC ENSO and Oscillations</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>ENSO, MJO, and other teleconnection historical archives</p>
                   </div>
                 </div>
               </a>
@@ -48,7 +48,7 @@
                 <div class="li-text">
                   <h5 class="li-head">IRI ENSO Forecast Plume</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>ENSO model forecasts</p>
                   </div>
                 </div>
               </a>
@@ -68,7 +68,7 @@
                 <div class="li-text">
                   <h5 class="li-head">HPRCC Climate Summary Maps</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Mapping tool to display historical data of several variables</p>
                   </div>
                 </div>
               </a>
@@ -81,7 +81,7 @@
                 <div class="li-text">
                   <h5 class="li-head">U.S. Drought Monitor</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Current and historical drought condition data</p>
                   </div>
                 </div>
               </a>
@@ -94,7 +94,7 @@
                 <div class="li-text">
                   <h5 class="li-head">SC-ACIS</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Historical station-based observation data</p>
                   </div>
                 </div>
               </a>
@@ -107,7 +107,7 @@
                 <div class="li-text">
                   <h5 class="li-head">XM-ACIS</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Historical station-based observation data</p>
                   </div>
                 </div>
               </a>
@@ -120,7 +120,7 @@
                 <div class="li-text">
                  <h5 class="li-head">ACIS Web Query Builder</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Historical station-based observation data</p>
                   </div>
                 </div>
               </a>
@@ -133,7 +133,7 @@
                 <div class="li-text">
                   <h5 class="li-head">CoCoRaHS</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Daily precipitation observation data</p>
                   </div>
                 </div>
               </a>
@@ -153,7 +153,7 @@
                 <div class="li-text">
                   <h5 class="li-head">NCEI National Climate Report</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Monthly National Climate Report database</p>
                   </div>
                 </div>
               </a>
@@ -166,7 +166,7 @@
                 <div class="li-text">
                   <h5 class="li-head">NCEI Climate Extremes Index</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>An index aimed at quanitfying observed climate changes within a particular area</p>
                   </div>
                 </div>
               </a>
@@ -179,7 +179,7 @@
                 <div class="li-text">
                   <h5 class="li-head">Global Temperature Analysis</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Several resources to identify global surface temperature changes/trends</p>
                   </div>
                 </div>
               </a>
@@ -199,7 +199,7 @@
                 <div class="li-text">
                   <h5 class="li-head">Purple Air</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Near real-time, global air quality/PM observations</p>
                   </div>
                 </div>
               </a>
@@ -212,7 +212,7 @@
                 <div class="li-text">
                   <h5 class="li-head">Air Quality Index Map</h5>
                   <div class="li-sub">
-                    <p>Summary of content.</p>
+                    <p>Real-time Air Quality Index global map</p>
                   </div>
                 </div>
               </a>
