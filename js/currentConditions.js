@@ -590,11 +590,15 @@ class IemStationChart {
                 title: {
                     text: 'Wind Speed (kts)',
                 },
+                alignTicks: false,
+                tickInterval: 5,
                 opposite: true,
                 },{
                 title: {
                     text: "Wind Direction"
                 },
+                alignTicks: false,
+                tickInterval: 45,
                 max: 360,
                 min: 0,
             }],
