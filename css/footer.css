@@ -21,19 +21,20 @@
     float: left;
 }
 
-h3 {
+.col h3 {
     color: #A69667;
     font-size: 2em;
     margin: 0;
+    text-align: left;
 }
 
-ul {
+.col ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-a,p,em {
+.col a,p,em {
     color: #fff;
     text-decoration: none;
 }
