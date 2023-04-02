@@ -1,7 +1,39 @@
 .page-footer {
     width: 100%;
-    text-align: center;
-    font-size: 1.2em;
-    background-color: #858585;
-    color: blue;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-image {
+    width: inherit;
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    width: 90%;
+}
+
+.col {
+    width: 33.3333%;
+    float: left;
+}
+
+h3 {
+    color: #A69667;
+    font-size: 2em;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a,p,em {
+    color: #fff;
+    text-decoration: none;
 }

@@ -13,6 +13,7 @@ table {
 .main {
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 /* Main upper content area */
@@ -103,7 +104,6 @@ table {
     align-items: center;
     text-align: center;
     width: 100%;
-    border: solid;
 }
 
 /* Generic graphic link designed for a flex container */
