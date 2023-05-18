@@ -1,3 +1,20 @@
+<div class="footer-row">
+    <div>
+        <button id="footer-toggle">
+            <h3>
+                <span class="open-text">CLICK FOR MORE</span>
+                <span class="close-text" hidden>LESS</span>
+            </h3>
+        </button>
+    </div>
+    <div>
+        <div class="social-container">
+            <img alt="UNC Charlotte Logo" class="footer-logo" src="images/charlotte-logo-footer.png"/>
+        </div>
+    </div>
+</div>
+
+<span id="footer-span" hidden>
 <div class="page-footer">
     <img src="images/background_clt.jpg" class="back-image"/>
     <div class="footer-container">
@@ -39,3 +56,22 @@
         </div>
     </div>
 </div>
+</span>
+
+<script type='text/javascript'>
+$(function(){
+
+    $('.open-text').click(function(){
+        $('.open-text').hide();
+        $('.close-text').show();
+        $('#footer-span').show();
+    });
+
+    $('.close-text').click(function(){
+        $('.close-text').hide();
+        $('#footer-span').hide();
+        $('.open-text').show();
+    });
+
+});
+</script>
