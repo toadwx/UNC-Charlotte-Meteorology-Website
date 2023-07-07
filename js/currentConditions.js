@@ -279,7 +279,7 @@ class IemStationChart {
             var dayOne = new Date(endDate);
             dayOne.setDate(endDate.getDate() - 2);
             var dayTwo = new Date(endDate);
-            dayOne.setDate(endDate.getDate() - 1);
+            dayTwo.setDate(endDate.getDate() - 1);
             var dayThree = new Date(endDate);
 
             // Handles multiple deferred calls so we dont end up with a nested mess
@@ -590,15 +590,11 @@ class IemStationChart {
                 title: {
                     text: 'Wind Speed (kts)',
                 },
-                alignTicks: false,
-                tickInterval: 5,
                 opposite: true,
                 },{
                 title: {
                     text: "Wind Direction"
                 },
-                alignTicks: false,
-                tickInterval: 45,
                 max: 360,
                 min: 0,
             }],
