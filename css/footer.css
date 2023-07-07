@@ -49,6 +49,10 @@
     margin: 0;
     font-family: 'Oswald', sans-serif;
     text-align: center;
+    color: #A69667;
+    font-size: 1.17em;
+    font-weight: bold;
+    letter-spacing: normal;
 }
 
 .footer-logo {
@@ -77,7 +81,7 @@
     padding: 0;
 }
 
-.col a,p,em {
+.col a, .col p, .col em {
     color: #fff;
     text-decoration: none;
 }

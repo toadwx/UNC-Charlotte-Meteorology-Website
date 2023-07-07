@@ -37,7 +37,7 @@
                   <div class="overlay">
                       <div class="name">Dr. Brian Magi</div>
                       <div class="prof-title">Associate Professor<br/>Earth Sciences Graduate Coordinator</div>
-                      <form method="POST" target="_blank" action="http://brianmagi.uncc.edu/">
+                      <form method="POST" target="_blank" action="https://geoearth.charlotte.edu/brian-magi">
                         <button class="info-btn" id="bmagi" type="submit">More</button>
                       </form>
                 </div>
